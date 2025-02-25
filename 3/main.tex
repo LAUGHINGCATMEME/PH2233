@@ -1,0 +1,219 @@
+\documentclass[%
+ sor,
+%aip,
+%twoside,
+%groupedaddress,
+%jmp,
+ jor,
+ amsmath,amssymb,
+%preprint,%
+ reprint,%
+%author-year,%
+%author-numerical,%
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{xcolor}
+\usepackage{circuitikz}
+\usepackage{siunitx}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{gensymb)
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{enumitem}
+
+
+\begin{document}
+
+\preprint{IDK what this does}
+
+\title{Experiment 4\\Specific Heat of Solids}
+
+\author{Aumshree P. Shah\\20231059\color{red}}
+\altaffiliation[\color{red}]{aumshree.pinkalbenshah@students.iiserpune.ac.in}
+\date{5  Feb 2025}
+\vspace{cm}
+\begin{abstract}
+In this experiment we measuure (add try to measure) the specific hear capacity of solids.
+\end{abstract}
+\maketitle
+\section{Theory and Procedure}
+\subsection{Apparatus}
+
+{\small
+\begin{itemize}
+\begin{minipage}[t]{0.45\textwidth}
+    \item Calorimeter
+    \item Shots of material(s)
+    \item Weighing balance
+    \item Steam chamber
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \item Steam generator
+    \item Electric heater
+    \item Thermometers
+\end{minipage}
+\end{itemize}
+}
+
+\subsection{Theory}
+
+The change in temperature $\Delta T$ of a material when supplied with a fixed amount of heat $\Delta Q$ depends
+on the type of material and is inversely proportional to the the mass $m$ of the material. The material dependence
+is given the quantity called the specific heat $c$ of the substance. The interdependence of these quantities is
+summarised by the equation$$\Delta Q= cm \Delta T$$
+The amount of heat required to raise the temperature of a unit mass of a substance by 1\si{\celsius} is called the
+specific heat of the substance. The SI unit of specific heat is [\si{\joule\per\kilogram\per\kelvin}]. The specific heat of water is among the highest of all substances. Historically the specific heat of water is arbitrarily set as 1\si{\calorie\per\gram\per\celsius}. The equivalent SI value is 4184 \si{\joule\per\kilogram\per\kelvin}. A related quantity is the molar specific heat $c_m$, which is the specific heat for 1  \si{\mole} of a substance. \\
+
+If $c_s$ is the heat capacity of shots, $\Delta T_s \equiv T_f -T_s$ is the change in temperature of shorts and $m_s$ is the mass of shorts then the heat lost by the shots is
+$$\Delta Q_s = c_s m_s \Delta T_s$$
+Similarly, heat gained by the water is
+$$\Delta Q_w = c_w m_ w\Delta T_w$$
+with $c_w$, $m_w$, $T_w$ and $\Delta T_w$ have their proper meanings.  \\ Now if there is no heat absorbed by the calorimeter then $\Delta Q_w = \Delta Q_s$, but that is not the case. To make the equation equal we replace $m_w$ by $m_w+m_f$ where $m_f$ is the equivalent water mass of the calorimeter. Hence we get
+\begin{equation}
+c_s = \frac{c_w(m_w +m_f)\Delta T_w}{m_s \Delta T_s}
+\end{equation} \\
+
+\subsection{Procedure}
+First we measure the mass of the shots of each material. Then we place shots of material into the steam chamber and close them using a cork with hole through which we put a thermometer to measure the $T_s$. When the temperature reaches equilibrium, we turn the chamber over and quickly pour all the material into calorimeter with measured mass and temperature of water. We stir it using a different thermometer and measure the equilibrium temperature $T_f$. \\
+We repeat this same procedure for different materials and then to measure $m_f$ of the calorimeter, we put water of higher temperature $\theta_{i1} \approx 60$\si{\celsius} into room temperature water inside calorimeter and measuring the equilibrium temperature $\theta_f$; using the same principle:
+\begin{equation}
+m_f = \frac{m_1\Delta \theta_1 - m_2 \Delta \theta_2}{\Delta \theta_2}
+\end{equation} \\
+
+\section{Observations}
+
+\begin{table}[ht]
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$m_s$(\si{\gram})} & \textbf{ $m_w$(\si{\gram})} & \textbf{$T_w$\si{\celsius}}  & \textbf{$T_f$\si{\celsius}} \\
+\hline
+Copper & 100.1 & 90.0 & 23.5 & 30.1 \\
+Acryllic & 44.5 & 45.0 & 24.9 & 35.0 \\
+Copper\footnote{Took the copper out earlier then equilibrium temperature} & 183.5 & 52.0 & 23.0 & 39.1 \\ 
+Ceramic & 31.4 & 69.0 & 23.9 & 29.3 \\
+\hline
+\end{tabular}
+\caption{With calorimeter of type-1, data was taken on 23 Jan 2025}
+\label{tab:table1}
+Data for Type 1:\\
+$m_2 = $ \si\{\gram}
+$T_2 = $ \si{\celcius} 
+$m_1$ \si{\gram}
+$T_1$ \si{\celcius}
+$T_f$ \si{\celcius}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$m_s$(\si{\gram})} & \textbf{ $m_w$(\si{\gram})} & \textbf{$T_s$\si{\celsius}} & \textbf{$T_w$\si{\celsius}}  & \textbf{$T_f$\si{\celsius}} \\
+\hline
+Copper & 55.0 & 176.4 & &26.1 & 30.0 \\
+Copper\footnote{Spillage while pouring water} & 171.1 & 154.0 & 90--91 &25.1 & 31.2 \\
+Acryllic & 52.3 & 144.4 & 87--88 & 25.1 & 29.3 \\
+Ceramic & 39.6 & 132.4 & 80 & 24.8 & 28.6 \\
+Copper & 180.0 & 180.0 &  & 22.3 & 28.5 \\
+\hline
+\end{tabular}
+\caption{With calorimeter of type-2, data taken on 29 Jan 2025}
+\label{tab:table2}
+Data for Type 1:\\
+$m_2 = $ \si\{\gram}
+$T_2 = $ \si{\celcius} 
+$m_1$ \si{\gram}
+$T_1$ \si{\celcius}
+$T_f$ \si{\celcius}
+\end{minipage}
+\end{table}
+
+\section{Uncertainties and Sources of Error}
+
+
+The experimental uncertainties originate from the following sources:
+\subsection{Uncertainities from precision of instrument}
+\begin{itemize}
+    \item Weight Measurement:
+    All weight values have an uncertainty of $\Delta m = \pm 0.05$ \si{\gram} due to instrument resolution.    
+    \item Temperature Measurement: 
+    Temperature values have an uncertainty of $\Delta T = \pm 0.005$ \si{\kelvin} due to instrument resolution. 
+\item Mercury Thermometer: Thermometer used to measure $T_s$ has an uncertanity of $\Delta T = \pm 0.5$ \si{\kelvin}
+\end{itemize}
+
+\subsection{Systematic Errors}
+\begin{itemize}
+\item Spillage during pouring of water
+\item Material being left in container
+\item Material going out of calorimeter
+\item material radiationg heat as per newtons law of colloing
+\item all equipment is gaining proper values assumption
+\item unequal temperature of calorimeter after each run if not calibrated
+\item  uneven heating 
+\subsection*{Precautions}
+\item if a material is already used then we preheat it  to remove water
+\item if some error occurs during experiment then we repeat to replace the data point.
+\item we pour tapp water in calorimeter after each run to make the temperature constant.
+\end{itemize}
+
+Explain error analysis of the following code in latex in this way: 
+Section of error analysis
+Subsection for each parameter and its error propoation a
+
+\section{Calculation and Error Analysis}
+Since the voltage is spread across a noticible range we take the mean value of minimum and maximum voltage to reduce the uncertanity of voltage and current. We shall take the \ref{table3} as the data points. Calculating the avrages from \ref{table2} we get:\\
+
+\subsection{Reduced Current Uncertanity}
+After taking mean, the new uncertanity in $A$ is determined by $$\Delta A = \Delta A \left( \frac{V_{max} - V_{min}}{\Delta V} \right)$$
+\subsection{Error Propagation}
+\subsubsection{Resistance Calculation}
+The resistance $R = V/I$ has uncertainty given by:
+\begin{equation}
+    \frac{\Delta R}{R} = \sqrt{\left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta I}{I}\right)^2}
+\end{equation}
+
+
+
+
+\subsection{Result}
+\ref{github}
+
+The reference resistance was determined to be: $R_0 = 2.90 \pm 7.7\% $. (This error accounts for uncertainty in temperature measurements)\\
+
+The Stefan-Boltzmann fit for the tungsten filament showed:
+$$
+P = (4.00 \pm 0.066) \times 10^{-14}\ \mathrm{T^4}
+$$
+
+The log-log analysis revealed a power-law relationship:
+$$
+\log P = (3.98 \pm 0.06)\log T + (-30.71 \pm 0.48)
+$$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+       The measured slope of $m = 3.98 \pm 0.06$ agrees with Stefan's law prediction of $P \propto T^4$, as the theoretical value of 4 lies within the experimental uncertainty range.
+       }%
+}\\
+\\
+
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{2cm}
+\appendix
+\section{Equipment Faulty}\label{appendix:prevexp}
+This same experiment was performed on 22 January 2025, whose observations didn't align with Stefan's law. Subsequent investigation revealed the apparatus used during that trial had faulty calibration.
+\section{Ambient Temperature}
+No measure of ambient temperature is taken in the latter experiment, since it had no use in calculations other than the fact that it can be neglected. 
+
+\bibliography{apssamp}
+\end{document}
+
+

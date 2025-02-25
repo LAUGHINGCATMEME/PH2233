@@ -1,0 +1,264 @@
+\documentclass[%
+ sor,
+%aip,
+%twoside,
+%groupedaddress,
+%jmp,
+ jor,
+ amsmath,amssymb,
+%preprint,%
+ reprint,%
+%author-year,%
+%author-numerical,%
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{xcolor}
+\usepackage{circuitikz}
+\usepackage{siunitx}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\begin{document}
+
+\preprint{IDK what this does}
+
+\title{Experiment 1\\Thermistor Characteristics}
+
+\author{Aumshree P. Shah\\20231059\color{red}}
+\altaffiliation[\color{red}]{aumshree.pinkalbenshah@students.iiserpune.ac.in}
+\date{12 Feb 2025}
+\vspace{1cm}
+\begin{abstract}
+\centering
+In this experiment we analyze the temperature sensitivity and resistance dependence of a semiconductor
+\end{abstract}
+\maketitle
+\section{Theory and Procedure}
+
+{\small
+\begin{itemize}
+\begin{minipage}[t]{0.45\textwidth}
+    \item Thermistor
+    \item Thermometer
+    \item Multimeter
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \item Large metal vessel 
+    \item Electric heater
+    \item Ice
+\end{minipage}
+\end{itemize}
+}
+
+\subsection{Theory}
+
+The change in temperature $\Delta T$ of a material when supplied with a fixed amount of heat $\Delta Q$ depends
+on the type of material and is inversely proportional to the the mass $m$ of the material. The material dependence
+is given the quantity called the specific heat $c$ of the substance. The interdependence of these quantities is
+summarised by the equation$$\Delta Q= cm \Delta T$$
+
+The amount of heat required to raise the temperature of a unit mass of a substance by 1\si{\celsius} is called the
+specific heat of the substance. The SI unit of specific heat is [\si{\joule\per\kilogram\per\kelvin}]. The specific heat of water is among the highest of all substances. Historically, the specific heat of water is arbitrarily set at 1cal \si{\per\gram\per\celsius}. The equivalent SI value is 4184 \si{\joule\per\kilogram\per\kelvin}. A related quantity is the molar specific heat $c_m$, which is the specific heat for 1  \si{\mole} of a substance. \\
+
+If $c_s$ is the heat capacity of shots, $\Delta T_s \equiv T_f -T_s$ is the change in temperature of shorts and $m_s$ is the mass of shorts, then the heat lost by the shots is
+$$\Delta Q_s = c_s m_s \Delta T_s$$
+Similarly, heat gained by the water is
+$$\Delta Q_w = c_w m_ w\Delta T_w$$
+with $c_w$, $m_w$, $T_w$ and $\Delta T_w$ have their proper meanings.  \\ 
+
+Now, if there is no heat absorbed by the calorimeter, then $\Delta Q_w = \Delta Q_s$, but that is not the case. To make the equation equal, we replace $m_w$ by $m_w+m_f$ where $m_f$ is the equivalent water mass of the calorimeter. Hence we get
+\begin{equation}
+c_s = \frac{c_w(m_w +m_f)\Delta T_w}{m_s \Delta T_s}
+\end{equation} \\
+
+\subsection{Procedure}
+First we measure the mass of the shots of each material. Then we place shots of material into the steam chamber and close them using a cork with hole through which we put a thermometer to measure the $T_s$. We raise the temperature of steam generator using electric heater. When the temperature reaches equilibrium, we turn the chamber over and quickly pour all the material into a calorimeter with measured mass and temperature of water. We stir it using a different thermometer and measure the equilibrium temperature $T_f$. \\
+We repeat this same procedure for different materials and then to measure $m_f$ of the calorimeter, we put water of higher temperature $\theta_{i1} \approx 60$\si{\celsius}\footnote{this is to reduce loss in evaporation and other convective losses} into room temperature water inside calorimeter and measuring the equilibrium temperature $\theta_f$; using the same principle:
+\begin{equation}
+m_f = \frac{m_1\Delta \theta_1 - m_2 \Delta \theta_2}{\Delta \theta_2}
+\end{equation} \\
+
+\section{Observations}
+
+
+
+\begin{table}[ht]
+\centering
+    \begin{minipage}[b]{0.48\hsize}\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$m_s$ (\si{\gram})} & \textbf{$m_w$ (\si{\gram})} & \textbf{$T_w$ (\si{\celsius})} & \textbf{$T_f$ (\si{\celsius})} \\
+\hline
+Copper & 100.1 & 90.0 & 23.5 & 30.1 \\
+Acrylic & 44.5 & 45.0 & 24.9 & 35.0 \\ % Fixed spelling
+Copper\footnote{Took the copper out earlier than equilibrium temperature} & 183.5 & 52.0 & 23.0 & 39.1 \\ 
+Ceramic & 31.4 & 69.0 & 23.9 & 29.3 \\
+\hline
+\end{tabular}
+\caption{With calorimeter of type-1, data was taken on 23 Jan 2025}
+\label{tab:table1}
+\vspace{0.5cm}Data for Type 1:
+\[
+\boxed{
+\begin{aligned}
+m_2 &= 62.2~\si{\gram} \\
+T_2 &= 20.7~\si{\celsius} \\
+m_1 &= 41.5~\si{\gram} \\
+T_1 &= 56.6~\si{\celsius} \\
+T_f &= 33.8~\si{\celsius}
+\end{aligned}
+}
+\]
+
+    \end{minipage}
+\hfill\vline\hfill
+    \begin{minipage}[b]{0.48\hsize}\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$m_s$ (\si{\gram})} & \textbf{$m_w$ (\si{\gram})} & \textbf{$T_s$ (\si{\celsius})} & \textbf{$T_w$ (\si{\celsius})} & \textbf{$T_f$ (\si{\celsius})} \\
+\hline
+Copper & 55.0 & 176.4 & \multicolumn{1}{c}{--} & 26.1 & 30.0 \\ % Centered dash
+Copper\footnote{Spillage while pouring water} & 171.1 & 154.0 & 90--91 & 25.1 & 31.2 \\
+Acrylic & 52.3 & 144.4 & 87--88 & 25.1 & 29.3 \\ % Fixed spelling
+Ceramic & 39.6 & 132.4 & 80 & 24.8 & 28.6 \\
+Copper & 180.0 & 180.0 & \multicolumn{1}{c}{--} & 22.3 & 28.5 \\
+\hline
+\end{tabular}
+\caption{With calorimeter of type-2, data taken on 29 Jan 2025}
+\label{tab:table2}
+\vspace{0.5cm}Data for Type 2:\\
+\[
+\boxed{
+\begin{aligned}
+m_2 &= 129.7~\si{\gram} \\
+T_2 &= 19.2~\si{\celsius} \\
+m_1 &= 87.5~\si{\gram} \\
+T_1 &= 56.6~\si{\celsius} \\
+T_f &= 33.8~\si{\celsius}
+\end{aligned}
+}
+\]
+    \end{minipage}
+\end{table}
+
+
+
+
+
+\section{Uncertainties and Sources of Error}
+\subsection{Uncertainties from precision of instrument}
+\begin{itemize}
+    \item Weight Measurements:
+    All weight values have an uncertainty of $\Delta m = \pm 0.05$ \si{\gram} due to instrument resolution.    
+    \item Temperature Measurements: Temperature values have an uncertainty of $\Delta T = \pm 0.005$ \si{\kelvin} due to instrument resolution. 
+\item Mercury Thermometer: The thermometer used to measure $T_s$ has an uncertainty of $\Delta T_m = \pm 0.5$ \si{\kelvin}
+\end{itemize}
+
+\subsection{Systematic Errors and Precautions}  
+Potential systematic errors included spillage during transfers, residual material retention in containers, unintended material escape from the calorimeter, heat dissipation through radiation (according to Newton's law of cooling), assumptions of instrument calibration accuracy, post-experiment temperature inconsistencies in the calorimeter due to inadequate calibration, and uneven heating.  
+
+Precautionary measures included preheating reused materials to eliminate residual moisture, repeating tests with procedural anomalies to replace outliers, and maintaining calorimeter thermal stability by refilling them with tap water after each run to standardize initial conditions.
+
+
+\section{Calculation and Error Analysis}
+From Table-\ref{tab:table1} and Table-{\ref{tab:table2}} we discard the two copper data points which had some error when performing before doing the calculation. 
+\subsection{Error Propagation}
+
+The heat capacity of copper is given by Equation-1. The uncertanity in $c_s$ is given by the equation:
+$$
+   \frac {\Delta c_s} {c_s} =\sqrt{ 
+(\partial m_w \Delta m)^2 + (\partial m_f \Delta m)^2 + (\partial m_s \Delta m)^2 + (\partial T_w \Delta T)^2 + (\partial T_f \Delta T)^2 + (\partial T_s \Delta T_m)^2 
+}$$
+Where these partials are calculated by\\
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+  {\partial m_w} &= \frac{c_w \Delta T_w}{m_s \Delta T_s} \\
+  {\partial m_s} &= \frac{c_w(m_w +m_f)\Delta T_w}{m_s^2 (t_s - t_f)} \\
+    {\partial m_f} &= \frac{c_w \Delta T_w}{m_s \Delta T_s}
+\end{align*}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+{\partial T_w} &= \frac{c_w(m_w + m_s) }{m_s} {\Delta T_s} \\
+   {\partial T_f} &= \frac{c_w(m_w + m_f) \Delta T_w)}{m_s \Delta T_w^2} \\
+    {\partial T_s} &= \frac{c_w(m_w +m_f)\Delta T_w}{m_s \Delta T_s^2}
+\end{align*}
+\end{minipage}
+\subsection{Calculation}
+For the data points which have not inital temperature, we take the same value corresponding to them in Table-\ref{tab:table2}. We discard the two data points which have some kind of spillage or error from our calculation. Since there is only one observation to calculate the water equivalent of the container, and seeing that the error in water equivalent doesn't affect the error that much, we shall take $20\%$ error for both values in calculation.
+Calculating errors described above and, from equations described in theory we get:\footnote{Refer to \cite{github} for calculations }
+\begin{table}[htbp]
+\centering
+\begin{tabular}{c|
+S[table-format=3.1]
+S[table-format=3.1]
+S[table-format=3.1]
+S[table-format=2.1]
+S[table-format=2.1]
+S[table-format=2.1]
+S[table-format=1.3]
+S[table-format=1.3]
+}
+\toprule
+Material & {$m_s$ (\si{\gram})} & {$T_s$ (\si{\celsius})} & {$m_w$ (\si{\gram})} & {$T_w$ (\si{\celsius})} & {$T_f$ (\si{\celsius})} & {$m_f$ (\si{\gram})} & {$c_s$ (\si{\joule\per\gram\per\celsius})} & {$\Delta c_s$ (\si{\joule\per\gram\per\celsius})} \\
+\midrule
+Copper & 55.0  & 90.5  & 176.4  & 26.1  & 30.0  & 10.0 & 0.914 & 0.021 \\
+Copper & 100.1 & 90.5  & 90.0   & 23.5  & 30.1  & 5.3  & 0.435 & 0.011 \\
+Copper  & 180.0 & 90.5  & 180.0  & 22.3  & 28.5  & 5.3  & 0.431 & 0.008 \\
+Acrylic & 52.3  & 87.5  & 144.4  & 25.1  & 29.3  & 10.0 & 0.891 & 0.021 \\
+Acrylic & 44.5  & 87.5  & 45.0   & 24.9  & 35.0  & 5.3  & 0.910 & 0.038 \\
+Ceramic & 39.6  & 80.0  & 132.4  & 24.8  & 28.6  & 10.0 & 1.112 & 0.029 \\
+Ceramic & 31.4  & 80.0  & 69.0   & 23.9  & 29.3  & 5.3  & 1.054 & 0.034 \\
+\bottomrule
+\end{tabular}
+\caption{Experimental data and calculated heat capacities.}
+\label{tab:heat_capacity}
+\end{table}
+
+\section{Result}
+The order of heat capacity we get is: 
+$$c_{\text{copper}}<c_{\text{ceramic}}<c_{\text{acrylic}}$$
+with values of heat capacities calculated by weighted mean, in \si{\joule\per\gram\per\celsius} are: 
+\[
+\boxed{
+\begin{split}
+c_{\text{copper}} &= 0.432 \pm 0.006 \\
+c_{\text{ceramic}} &= 0.895 \pm 0.018\\
+c_{\text{acrylic}} &= 1.088 \pm 0.022
+\end{split}
+}
+\]
+
+
+
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{2cm}
+\appendix
+\section{Theoretical Values}
+The theoretical values are in same units are\footnote{\cite{copper}, \cite{acrylic}, \cite{ceramic}}: 
+\[
+\begin{split}
+c_{\text{copper}} &\approx 0.385\\
+c_{\text{ceramic}} &\approx 0.8-1.1\\
+c_{\text{acrylic}} &\approx 1.46 - 2.16
+\end{split}
+\]
+
+
+\bibliography{aipsamp}
+\end{document}
+
+
+
+
+

@@ -1,0 +1,170 @@
+\documentclass[%
+ sor,
+ jor,
+ amsmath,amssymb,
+ reprint,
+]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{placeins}
+\usepackage{float}
+
+\begin{document}
+
+\title{Experiment 2\\Thermal Expansion of Metals}
+
+\author{Aumshree P. Shah\\20231059}
+\altaffiliation{\color{red}aumshree.pinkalbenshah@students.iiserpune.ac.in}
+\date{13 February 2025}
+
+\begin{abstract}
+\centering
+In this experiment, we try to determine the thermal expansion coefficient of different metals.
+\end{abstract}
+
+\maketitle
+
+\section{Theory and Procedure}
+\subsection{Apparatus}
+\small
+\begin{itemize}
+    \item Linear Expansion Apparatus
+    \item Brass, Aluminium, and Copper rods
+    \item Steam generator and electric heater
+    \item Thermometers for temperature measurements
+\end{itemize}
+
+\subsection{Theory}
+When a solid is heated, its length increases. This expansion is approximately linear for small temperature ranges:
+\[
+L = L_0 (1 + \alpha \Delta T)
+\]
+where $L$ is the final length, $L_0$ the initial length, $\alpha$ the coefficient of thermal expansion, and $\Delta T$ the temperature change.
+
+\subsection{Procedure}
+\begin{enumerate}
+    \item Place the brass rod in the apparatus and ensure the thermometer is in contact with it.
+    \item Measure the initial position using a spherometer before heating.
+    \item  Pass steam through the apparatus to heat the rod.
+    \item  Wait until the temperature stabilizes and measure the new length using the spherometer.
+    \item Allow the rod to cool and take repeated measurements.
+\end{enumerate}
+\pagebreak
+\section{Observations}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ccccc|}
+    \hline
+    Material & $T_i$ (\si{\celsius}) & $T_f$ (\si{\celsius}) &  $\Delta L$ ($10^{-5}$ m) & Length (cm) \\
+    \hline
+    Copper & 23.9 & 66.7 & 75 &  60.2 \\
+    Brass & 27.0 & 77.0 & 77 & 59.9 \\
+    Steel & 25.0 & 80.0  & 73 & 60.0 \\
+    Steel & 28.0 & 82.0 & 65 & 60.0 \\
+    Brass & 24.4 & 80.1 & 85 &  60.0\\
+    Aluminium & 25.7 & 75.0 & 102 & 60.0\\
+    Copper & 23.1 & 83.4 & 73 & 59.9 \\
+    \hline
+\end{tabular}
+\caption{Data taken on 15 Jan 2025}
+\vspace{1cm}
+\centering
+\begin{tabular}{|ccccc|}
+    \hline
+    Material & $T_i$ (\si{\celsius}) & $T_f$ (\si{\celsius}) &  $\Delta L$ ($10^{-5}$ m) & Length (cm) \\
+    \hline
+    Brass & 24.8 & 70.0 & 86&  60.0\\
+    Brass & 26.6 & 59.9 & 81 & 60.0\\
+    \hline
+\end{tabular}
+\caption{Data taken on 17 Jan 2025, Rod having uneven temperature, mean  temperature is taken for calculations}
+
+\end{table}
+
+\section{Uncertainties and Error Sources}
+\subsection{Measurement Uncertainties}
+\begin{itemize}
+    \item \textbf{Length Measurements:} Uncertainty of $\pm 0.05$ cm, expansion uncertainty of $\pm 5\times 10^{-6}$ m.
+    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.005$ \si{\kelvin} due to instrument resolution.
+\end{itemize}
+
+\subsection{Systematic Errors}
+\begin{itemize}
+    \item Steam temperature fluctuations affecting heating consistency.
+    \item Inconsistent contact between the thermometer and the metal rod.
+    \item Delayed response of the spherometer due to manual operation.
+\end{itemize}
+
+\section{Calculation and Error Analysis}
+\subsection{Error Propagation}
+The uncertainty in $\alpha$ is given by:
+\[
+\sigma_{\alpha} = \alpha \sqrt{\left( \frac{\sigma_{\Delta L}}{\Delta L} \right)^2 + \left( \frac{\sigma_L}{L} \right)^2 + \left( \frac{\sigma_{\Delta T}}{\Delta T} \right)^2}
+\]
+where $\sigma_{\Delta L}, \sigma_L, \sigma_{\Delta T}$ are the uncertainties in expansion length, initial length, and temperature difference, respectively.
+
+\subsection{Calculation}
+From the Python calculations, we get:\footnote{Refer to \cite{github} for calculations}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\hline
+Material & $\alpha$ (\si{1/\degreeCelsius}) \\
+\hline
+Copper & $(2.94 \pm 0.12) \times 10^{-5}$ \\
+Brass & $(2.61 \pm 0.09) \times 10^{-5}$ \\
+Steel & $(2.19 \pm 0.07) \times 10^{-5}$ \\
+Steel & $(1.99 \pm 0.07) \times 10^{-5}$ \\
+Brass & $(2.52 \pm 0.08) \times 10^{-5}$ \\
+Aluminium & $(3.42 \pm 0.12) \times 10^{-5}$ \\
+Copper & $(2.00 \pm 0.06) \times 10^{-5}$ \\
+Brass & $(3.17 \pm 0.12) \times 10^{-5}$ \\
+Brass & $(4.10 \pm 0.19) \times 10^{-5}$ \\
+\hline
+\end{tabular}
+\caption{Calculated expansion coefficients}
+\end{table}
+
+\section{Result}
+The calculated values of $\alpha$ show high precision but large variations from expected values. The inconsistencies suggest experimental errors, leading to unreliable results.
+
+\textbf{Possible causes:}
+\begin{itemize}
+    \item Temperature inconsistencies across different trials.
+    \item Changing steam temperature.
+    \item Uneven heating of the rod.
+    \item Not having constant temperature across the rod, making it hard to determine the temperature of it.
+\end{itemize}
+
+
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+Due to these issues, we consider this experiment is inconclusive in determining values of the coefficients.
+       }%
+}\\
+
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{1cm}
+
+\appendix
+\section{Theoretical Values}
+The expected values of $\alpha$ in \si{\per\celsius} are:\footnote{\cite{alpha}}
+\[
+\begin{split}
+\alpha_{\text{Steel}} &\approx (1.08 - 1.25) \times 10^{-5}\\
+\alpha_{\text{Brass}} &\approx (1.8 - 1.9) \times 10^{-5}\\
+\alpha_{\text{Aluminium}} &\approx (2.1 - 2.4) \times 10^{-5}\\
+\alpha_{\text{Copper}} &\approx 1.78 \times 10^{-5}
+\end{split}
+\]
+
+\bibliography{aipsamp}
+\end{document}
