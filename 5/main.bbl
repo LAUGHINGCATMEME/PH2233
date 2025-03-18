@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{fsu_manual}
+{FSU HEP Group}.
+\newblock {Photoelectric Effect Experiment Manual}.
+\newblock
+  \url{http://www.hep.fsu.edu/~wahl/phy4822/expinfo/photel/SVSPhotel.pdf},
+  2025.
+\newblock [Online; accessed 17 March 2025].
+
+\bibitem{github_code}
+{LAUGHINGCATMEME}.
+\newblock {PH2233 - Code Repository}.
+\newblock \url{https://github.com/LAUGHINGCATMEME/PH2233}, 2025.
+\newblock [Online; accessed 17 March 2025].
+
+\bibitem{ses_apparatus}
+{Ses Instruments}.
+\newblock {Planck's Constant Experiment (PC-101)}.
+\newblock
+  \url{https://www.sesinstruments.in/planck-s-constant-experiment-pc-101-5141096.html},
+  2025.
+\newblock [Online; accessed 17 March 2025].
+
+\bibitem{wiki_photoelectric}
+{Wikipedia contributors}.
+\newblock {Photoelectric effect}.
+\newblock \url{https://en.wikipedia.org/wiki/Photoelectric_effect}, 2025.
+\newblock [Online; accessed 17 March 2025].
+
+\end{thebibliography}

@@ -12,6 +12,8 @@
 %author-numerical,%
 ]{revtex4-2}
 
+
+\usepackage{natbib}
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
 \usepackage{circuitikz}
@@ -26,177 +28,157 @@
 \usepackage{siunitx}
 \usepackage{enumitem}
 
+\graphicspath{ {./images/} }
+
 \begin{document}
 
 \preprint{IDK what this does}
 
-\title{Experiment 4\\Specific Heat of Solids}
+\title{Experiment 5\\Photoelectric Effect}
 
 \author{Aumshree P. Shah\\20231059\color{red}}
 \altaffiliation[\color{red}]{aumshree.pinkalbenshah@students.iiserpune.ac.in}
-\date{5 Feb 2025}
+\date{\today}
 \vspace{1cm}
 \begin{abstract}
 \centering
-In this experiment we try to measure specific heat capacity of solids.
+In this experiment, we attempt to measure Planck's constant and test the validity of the inverse square law.
 \end{abstract}
 \maketitle
 \section{Theory and Procedure}
-\subsection{Apparatus}
-
-{\small
-\begin{itemize}
-\begin{minipage}[t]{0.45\textwidth}
-    \item Calorimeter
-    \item Shots of material(s)
-    \item Weighing balance
-    \item Steam chamber
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.45\textwidth}
-    \item Steam generator
-    \item Electric heater
-    \item Thermometer
-\end{minipage}
-\end{itemize}
-}
-
 \subsection{Theory}
+It was observed as early as 1905 that most metals under influence of radiation, emit electrons. This phenomenon was termed as photoelectric emission. The detailed study of it has shown:
+\begin{enumerate}
+  \item That the emission process depends strongly on frequency of radiation.
+  \item For each metal there exists a critical frequency such that light of lower frequency is unable to liberate member of electrons is strictly proportional to the intensity of this radiation.
+  \item The emission of electron occurs within a very short time interval after arrival of the radiation and member of electrons is strictly proportional to the intensity of this radiation. 
+\end{enumerate}
+The experimental facts given above are among the strongest evidence that the electromagnetic field is quantified and the field consists of quanta of energy $E = h \nu$ where $\nu$ is the frequency of the radiation and $h$ is the Planck’s constant. These quanta are called photons. \\
 
-The change in temperature $\Delta T$ of a material when supplied with a fixed amount of heat $\Delta Q$ depends
-on the type of material and is inversely proportional to the the mass $m$ of the material. The material dependence
-is given the quantity called the specific heat $c$ of the substance. The interdependence of these quantities is
-summarised by the equation$$\Delta Q= cm \Delta T$$
+Further it is assumed that electrons are bound inside the metal surface with an energy $e\phi$, where $\phi$ is called work function. It then follows that if the frequency of the light is such that $h\nu > e \phi$ it will be possible to eject photoelectron, while if $h\nu < e \phi$, it would be impossible. In the former case, the excess energy of quantum appears as kinetic energy of the electron, so that \begin{equation}h\nu = \frac 1 2 mv^2 + e\phi \end{equation} which is the famous photoelectrons equation formulated by Einstein in 1905. The energy of emitted photoelectrons can be measured by simple retarding potential techniques as is done in this experiment.
+Retarding potential at which the photocurrent stopped, we call it stopping potential ($V_s$) and it's used to measure the kinetic energy of photoelectrons ($E_e$), we have: 
+\begin{equation}E_e = \frac 1 2 mv^2 = eV_s \,\,\,\,\,\,\,\,\,\,\,\,\,\,  \text{or} \,\,\,\,\,\,\,\,\,\,\,\,\,\, V_s = \frac h e \nu-\phi \end{equation}
+So when we plot the graph of $V_s$ as a function of $\nu$, the slope has a value of $\frac h e $ and it intercepts on x-axis at $V_s = 0$ and the $\nu$ at the intercept with the slope of the graph gives the work function $\phi$.
 
-The amount of heat required to raise the temperature of a unit mass of a substance by 1\si{\celsius} is called the
-specific heat of the substance. The SI unit of specific heat is [\si{\joule\per\kilogram\per\kelvin}]. The specific heat of water is among the highest of all substances. Historically, the specific heat of water is arbitrarily set at 1cal \si{\per\gram\per\celsius}. The equivalent SI value is 4184 \si{\joule\per\kilogram\per\kelvin}. A related quantity is the molar specific heat $c_m$, which is the specific heat for 1  \si{\mole} of a substance. \\
-
-If $c_s$ is the heat capacity of shots, $\Delta T_s \equiv T_f -T_s$ is the change in temperature of shorts and $m_s$ is the mass of shorts, then the heat lost by the shots is
-$$\Delta Q_s = c_s m_s \Delta T_s$$
-Similarly, heat gained by the water is
-$$\Delta Q_w = c_w m_ w\Delta T_w$$
-with $c_w$, $m_w$, $T_w$ and $\Delta T_w$ have their proper meanings.  \\ 
-
-Now, if there is no heat absorbed by the calorimeter, then $\Delta Q_w = \Delta Q_s$, but that is not the case. To make the equation equal, we replace $m_w$ by $m_w+m_f$ where $m_f$ is the equivalent water mass of the calorimeter. Hence we get
-\begin{equation}
-c_s = \frac{c_w(m_w +m_f)\Delta T_w}{m_s \Delta T_s}
-\end{equation} \\
 
 \subsection{Procedure}
-First we measure the mass of the shots of each material. Then we place shots of material into the steam chamber and close them using a cork with hole through which we put a thermometer to measure the $T_s$. We raise the temperature of steam generator using electric heater. When the temperature reaches equilibrium, we turn the chamber over and quickly pour all the material into a calorimeter with measured mass and temperature of water. We stir it using a different thermometer and measure the equilibrium temperature $T_f$. \\
-We repeat this same procedure for different materials and then to measure $m_f$ of the calorimeter, we put water of higher temperature $\theta_{i1} \approx 60$\si{\celsius}\footnote{this is to reduce loss in evaporation and other convective losses} into room temperature water inside calorimeter and measuring the equilibrium temperature $\theta_f$; using the same principle:
-\begin{equation}
-m_f = \frac{m_1\Delta \theta_1 - m_2 \Delta \theta_2}{\Delta \theta_2}
-\end{equation} \\
+
+\begin{enumerate}
+	\item Read the user manual of the setup (Refer to Refernce-\cite{fsu_manual}).
+  \item Insert the red color filter (635 nm), set light intensity switch at strong light, voltage direction switch at `-', display mode switch at current display.
+  \item Adjust to de-accelerating voltage to 0 $V$  and set current range selector at X 0.001. Increase the de-accelerating to decrease the photo current to zero. Take down the de-accelerating voltage $(V_s)$ corresponding to zero current of 635 nm wavelength. Get the $V_s$ of other wave lengths, in the same way.
+  \item For verification of inverse square law, remove filters, fix the intensity of light around a proper value, and take the current values by varing the light source at different distance from the vaccum-tube.
+\end{enumerate}
+
+
+\subsection{Precautions}
+\begin{itemize}
+  \item Ensure there is no obstruction between the source and the photo-tube (see Appendix~\ref{appendix:prevexp}).
+  \item Clean all the filters properly
+   \item Check weather the filters work   (see Appendix~\ref{appendix:filters}).
+\end{itemize}
+
+
+
 
 \section{Observations}
-
 
 
 \begin{table}[ht]
 \centering
     \begin{minipage}[b]{0.48\hsize}\centering
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Material} & \textbf{$m_s$ (\si{\gram})} & \textbf{$m_w$ (\si{\gram})} & \textbf{$T_w$ (\si{\celsius})} & \textbf{$T_f$ (\si{\celsius})} \\
+\textbf{Filter}& \textbf{No. of } & \textbf{Voltage} \\
+\textbf{Wavelength (nm)} & \textbf{filters}& \textbf{(V)}		\\
 \hline
-Copper & 100.1 & 90.0 & 23.5 & 30.1 \\
-Acrylic & 44.5 & 45.0 & 24.9 & 35.0 \\ % Fixed spelling
-Copper\footnote{Took the copper out earlier than equilibrium temperature} & 183.5 & 52.0 & 23.0 & 39.1 \\ 
-Ceramic & 31.4 & 69.0 & 23.9 & 29.3 \\
+635 & 1 &	-0.32		\\
+585 & 4 &	 -0.48        \\  
+540 & 3 &	  -0.65       \\
+500 & 4 &	   -0.71      \\
+460 & 2 &	    -0.99     \\
+
 \hline
 \end{tabular}
-\caption{With calorimeter of type-1, data was taken on 23 Jan 2025}
+\caption{Stopping voltage at different filters, with source at $l=25.0 \si{\centi\meter}$. Data taken on 11-Mar-2025}
 \label{tab:table1}
-\vspace{0.5cm}Data for Type 1:
 \[
 \boxed{
 \begin{aligned}
-m_2 &= 62.2~\si{\gram} \\
-T_2 &= 20.7~\si{\celsius} \\
-m_1 &= 41.5~\si{\gram} \\
-T_1 &= 56.6~\si{\celsius} \\
-T_f &= 33.8~\si{\celsius}
+         \text{Least count of Voltage}  &= 0.01\si{\volt} \\
+	 \text{Least count of Current}  &= 10^{-7}~\si{\ampere} \\
+	 \text{Least count of Wavelength}  &= 10^{-8}~\si{\meter} \\
 \end{aligned}
 }
 \]
 
-    \end{minipage}
+
+\end{minipage}
 \hfill\vline\hfill
     \begin{minipage}[b]{0.48\hsize}\centering
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\textbf{Material} & \textbf{$m_s$ (\si{\gram})} & \textbf{$m_w$ (\si{\gram})} & \textbf{$T_s$ (\si{\celsius})} & \textbf{$T_w$ (\si{\celsius})} & \textbf{$T_f$ (\si{\celsius})} \\
+\textbf{Distance } & \textbf{Current} \\
+\textbf{(cm)} & \textbf{($\mu$A)} \\
 \hline
-Copper & 55.0 & 176.4 & \multicolumn{1}{c}{--} & 26.1 & 30.0 \\ % Centered dash
-Copper\footnote{Spillage while pouring water} & 171.1 & 154.0 & 90--91 & 25.1 & 31.2 \\
-Acrylic & 52.3 & 144.4 & 87--88 & 25.1 & 29.3 \\ % Fixed spelling
-Ceramic & 39.6 & 132.4 & 80 & 24.8 & 28.6 \\
-Copper & 180.0 & 180.0 & \multicolumn{1}{c}{--} & 22.3 & 28.5 \\
+16.0 	 &12.2 		\\
+18.0 	 &10.0          \\  
+20.0 	 & 7.6          \\
+24.0 	 & 4.9          \\
+30.0 	 & 3.3          \\
+35.0 	 & 2.5  	\\
+40.0 	 & 2.2  	\\
 \hline
 \end{tabular}
-\caption{With calorimeter of type-2, data taken on 29 Jan 2025}
+\caption{Current at different distances, fixed intensity. Data taken on 11-Mar-2025 }
 \label{tab:table2}
-\vspace{0.5cm}Data for Type 2:\\
-\[
-\boxed{
-\begin{aligned}
-m_2 &= 129.7~\si{\gram} \\
-T_2 &= 19.2~\si{\celsius} \\
-m_1 &= 87.5~\si{\gram} \\
-T_1 &= 56.6~\si{\celsius} \\
-T_f &= 33.8~\si{\celsius}
-\end{aligned}
+\[ \boxed{
+ \begin{aligned}
+         \text{Least count of Voltage}  &= 0.01\si{\volt} \\
+	 \text{Least count of Current}  &= 10^{-7}~\si{\ampere} \\
+         \text{Least count of Length}  &= 0.0001~\si{\meter} \\
+ \end{aligned}
 }
 \]
-    \end{minipage}
+
+   \end{minipage}
 \end{table}
-
-
-
 
 
 \section{Uncertainties and Sources of Error}
 \subsection{Uncertainties from precision of instrument}
 \begin{itemize}
-    \item Weight Measurements:
-    All weight values have an uncertainty of $\Delta m = \pm 0.05$ \si{\gram} due to instrument resolution.    
-    \item Temperature Measurements: Temperature values have an uncertainty of $\Delta T = \pm 0.005$ \si{\kelvin} due to instrument resolution. 
-\item Mercury Thermometer: The thermometer used to measure $T_s$ has an uncertainty of $\Delta T_m = \pm 0.5$ \si{\kelvin}
+    \item Distance Measurements:
+    All length values have an uncertainty of $\Delta l = \pm 0.5$ \si{\milli\meter} due to instrument resolution.    
+\item Current Measurements: Current values have an uncertainty of $\Delta A = \pm 5\times10^{-8}$ \si{\ampere} due to instrument resolution. 
+    \item Voltage Measurements: Voltage values have an uncertainty of $\Delta V = \pm 0.005$ \si{\volt} due to instrument resolution. 
+    \item Filter Uncertanity: To account for the error in non-ideal filters, we take the uncertainity to be $\pm 5$ nm.
 \end{itemize}
 
-\subsection{Systematic Errors and Precautions}  
-Potential systematic errors included spillage during transfers, residual material retention in containers, unintended material escape from the calorimeter, heat dissipation through radiation (according to Newton's law of cooling), assumptions of instrument calibration accuracy, post-experiment temperature inconsistencies in the calorimeter due to inadequate calibration, and uneven heating.  
-
-Precautionary measures included preheating reused materials to eliminate residual moisture, repeating tests with procedural anomalies to replace outliers, and maintaining calorimeter thermal stability by refilling them with tap water after each run to standardize initial conditions.
-
+\subsection{Systematic Errors}
 
 \section{Calculation and Error Analysis}
-From Table-\ref{tab:table1} and Table-{\ref{tab:table2}} we discard the two copper data points which had some error when performing before doing the calculation. 
-\subsection{Error Propagation}
 
-The heat capacity of copper is given by Equation-1. The uncertanity in $c_s$ is given by the equation:
-$$
-   \frac {\Delta c_s} {c_s} =\sqrt{ 
-(\partial m_w \Delta m)^2 + (\partial m_f \Delta m)^2 + (\partial m_s \Delta m)^2 + (\partial T_w \Delta T)^2 + (\partial T_f \Delta T)^2 + (\partial T_s \Delta T_m)^2 
-}$$
-Where these partials are calculated by\\
-\begin{minipage}{0.5\textwidth}
-\begin{align*}
-  {\partial m_w} &= \frac{c_w \Delta T_w}{m_s \Delta T_s} \\
-  {\partial m_s} &= \frac{c_w(m_w +m_f)\Delta T_w}{m_s^2 (t_s - t_f)} \\
-    {\partial m_f} &= \frac{c_w \Delta T_w}{m_s \Delta T_s}
-\end{align*}
-\end{minipage}%
-\begin{minipage}{0.5\textwidth}
-\begin{align*}
-{\partial T_w} &= \frac{(m_w + m_s) c_w}{m_s} {\Delta T_s} \\
-   {\partial T_f} &= \frac{(m_w + m_f) c_w \Delta T_w)}{m_s \Delta T_w^2} \\
-    {\partial T_s} &= \frac{c_w(m_w +m_f)\Delta T_w}{m_s \Delta T_s^2}
-\end{align*}
-\end{minipage}
-\subsection{Calculation}
-For non observed data potms we take sam einital temperatuer. disdcaard twwo non coper data points and take +- 3 grams of errpr of water equivalent for cimplicity. 
+\subsection{Plank's constant}
+To calculate the Plank's constant we use Equation-2, and plot the graph of $V_s$ vs $\nu$. The slope of the graph will have value of $h/e$. Now since $c = \lambda\nu$, this gives us $\nu = c/\lambda$ and \textbf{ENTER A BOOK REFRENCE HERE} $$\Delta \nu = c\frac{\Delta \lambda}{\lambda^2}$$
+
+Plotting the graph of $\nu \text{ vs } V_s$ with their respective uncertanity: \textbf{ENTER A CODE REFRENCE HERE} 
+
+\includegraphics[scale=0.69]{image1}\\
+\includegraphics[scale=0.69]{image 2}
+
+Optimized Parameters: [ 0.36404357 -1.41054501]
+
+Parameter Errors: [0.03307623 0.17843993]
+
+
+
+
+\subsection{Inverse Square Law}
+\includegraphics[scale=0.69]{image}
+Optimized Parameters: [ -2.04953181 -15.06801565]
+Parameter Errors: [0.08743895 0.14215498]
+
 
 \section{Result}
 \ref{github}
@@ -219,19 +201,38 @@ $$
        }%
 }\\
 \\
+As observed in previous trials, the equipment malfunctioned multiple times (see Appendix~\ref{appendix:prevexp}).  
+
+To account for filtering issues, multiple filters were used (see Appendix~\ref{appendix:filters}).  
+
+Anomalies in voltage readings, especially with the blue filter, were noted (see Appendix~\ref{appendix:bluefilter}).
 
 \noindent\rule{\linewidth}{0.4pt}
 \vspace{2cm}
+
+
 \appendix
-\section{water equivilane}\label{appendix:prevexp}
-ONly single measurement of wateer equivilant taken.
-\section{Ambient Temperature}
-No measure of ambient temperature is taken in the latter experiment, since it had no use in calculations other than the fact that it can be neglected. 
+\section{Equipment Faulty on Multiple Occasions} \label{appendix:prevexp}
+This experiment was performed multiple times, but the obtained values were highly inconsistent. Later, it was discovered that the instrument contained styrofoam inside, which needed to be removed.  
+\section{Filters Not Working} \label{appendix:filters}
+The filters used in the experiment were not proper optical filters and, as a result, did not effectively filter light. Therefore, multiple filters were used for a given wavelength.  
 
+\section{Blue Filter Error} \label{appendix:bluefilter}
+The values obtained with the addition of the blue filter appear incorrect. Without any filter, the voltage should not exceed $0.88V$, but the blue filter resulted in a reading of $0.99V$.  
+
+
+
+
+
+... as discussed in \cite{PrestonDietzErrorAnalysis}.
+\cite{PrestonDietzErrorAnalysis}
+Referencing the photoelectric effect \cite{wiki_photoelectric}. The code for the experiment can be found in the repository \cite{github_code}. The apparatus used is described in \cite{ses_apparatus}, and the detailed manual is available in \cite{fsu_manual}.
+
+
+
+
+\bibliographystyle{unsrt}
 \bibliography{aipsamp}
+
+
 \end{document}
-
-
-
-
-

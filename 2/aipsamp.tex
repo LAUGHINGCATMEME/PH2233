@@ -13,6 +13,9 @@
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{placeins}
 \usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
 
 \begin{document}
 
@@ -20,7 +23,7 @@
 
 \author{Aumshree P. Shah\\20231059}
 \altaffiliation{\color{red}aumshree.pinkalbenshah@students.iiserpune.ac.in}
-\date{13 February 2025}
+\date{\today}
 
 \begin{abstract}
 \centering
@@ -32,85 +35,129 @@ In this experiment, we try to determine the thermal expansion coefficient of dif
 \section{Theory and Procedure}
 \subsection{Apparatus}
 \small
+\begin{minipage}{0.48\textwidth}
 \begin{itemize}
-    \item Linear Expansion Apparatus
-    \item Brass, Aluminium, and Copper rods
-    \item Steam generator and electric heater
-    \item Thermometers for temperature measurements
+	\item[] Thermal Expansion Apparatus
+	\item[] Brass, Aluminium, Copper and Steel rods 
 \end{itemize}
-
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\begin{itemize}
+	\item[] Steam generator and electric heater
+		\item[] Thermometer for temperature measurements
+\end{itemize}
+\end{minipage}
 \subsection{Theory}
 When a solid is heated, its length increases. This expansion is approximately linear for small temperature ranges:
 \[
 L = L_0 (1 + \alpha \Delta T)
 \]
 where $L$ is the final length, $L_0$ the initial length, $\alpha$ the coefficient of thermal expansion, and $\Delta T$ the temperature change.
+The above formula can simply be written as: $$\Delta L = L \alpha \Delta T $$ For this experiment we use thermal expansion apparatus as shown in the image:\\
+INSERT IMAGE HERE
+
+
 
 \subsection{Procedure}
 \begin{enumerate}
-    \item Place the brass rod in the apparatus and ensure the thermometer is in contact with it.
-    \item Measure the initial position using a spherometer before heating.
-    \item  Pass steam through the apparatus to heat the rod.
-    \item  Wait until the temperature stabilizes and measure the new length using the spherometer.
-    \item Allow the rod to cool and take repeated measurements.
+	\item Place the rod in the apparatus.
+	\item Fix all the screws in proper position to make the road stable. 
+	\item Measure the temperature of the rod along the ends and the center for better accuracy.
+	\item Now fix the steam tubes in their proper position.
+	\item When everything is measured, measure the length of the road as shown int he IFGGGGG: 
+	\item Start the induction and when the steam passes through the rod, measure the expansion of the rod using the spherometer. 
+	\item Let the apparatus cool before putting in another rod and repeat this for different materials and different rods.
 \end{enumerate}
-\pagebreak
+\subsubsection{Precautions}
+\begin{itemize}
+	\item Ensure to use thermal gloves, this helps reduce the heat flow from our hand to apparatus
+	\item After measuring the expansion, sprinkle water or give enough time for the apparatus to cool (we used wet paper towels to cool the apparatus)
+	\item Ensure the screws are tight enough. 
+	\item Measure the length of the rod after fixing the screws, measuring the length before may change its value when fixing the screws.
+	\item Use different rods, when using the same material to reduce any instrumental error from material.
+\end{itemize}
+\subsubsection{Calibration}
+We start by calibrating the apparatus to see weather the apparatus is working or not. For this we shall use copper rods whose thermal expansion coefficient is known; $\alpha_{\text{copper}} = 16.6 \times 10^{-6} \si{\per\celsius}$\footnote{Reference: \cite{alpha}}. We place the rods in the apparatus and measure its length ($L$), change in length ($\Delta L$) and temperature across the rod, which may not be the same so we take multiple values to reduce error. 
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+	Material 	& $T_i (\si{\celsius})$ 	& $L (\si{\centi\meter})$) 	& $\Delta L (10^{-5}\si{\meter})$ \\ 
+	\hline
+	Copper		& 24.0 				& 59.0 				& 75\\
+	Copper		& 25.5-24.5-25.5 		& 59.7				& 74\\	
+ \hline
+\end{tabular}
+\end{center}
+Now using the known $\alpha_{\text{copper}}$ we calculate the temperature of rods in equilibrium as: 
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+ \hline
+ Material 	& $T_i (\si{\celsius})$ 	& $L (\si{\centi\meter})$) 	& $\Delta L (10^{-5}\si{\meter})$ & $\alpha (10^{-6}\si{\per\celsius})$	& $T_f (\si{\celsius})$ \\ 
+	\hline
+ Copper		& 24.0 				& 59.0 				& 75 	& 16.6 & 99.6\\
+ Copper		& 25.5-24.5-25.5 		& 59.7				& 74 	& 16.6 & 99.3\\	
+ \hline
+\end{tabular}
+\end{center}
+From this data we conclude that the temperature of rods in equilibrium is $\approx 100\si{\celsius}$; which we shall take as the final temperature to calculate coefficient of thermal expansion of the other materials. 
+
+
 \section{Observations}
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|ccccc|}
+\begin{tabular}{|c|ccc|}
     \hline
-    Material & $T_i$ (\si{\celsius}) & $T_f$ (\si{\celsius}) &  $\Delta L$ ($10^{-5}$ m) & Length (cm) \\
+    Material & $T_i$ (\si{\celsius})  & Length (cm) & $\Delta L$ ($10^{-5}$ m)\\
     \hline
-    Copper & 23.9 & 66.7 & 75 &  60.2 \\
-    Brass & 27.0 & 77.0 & 77 & 59.9 \\
-    Steel & 25.0 & 80.0  & 73 & 60.0 \\
-    Steel & 28.0 & 82.0 & 65 & 60.0 \\
-    Brass & 24.4 & 80.1 & 85 &  60.0\\
-    Aluminium & 25.7 & 75.0 & 102 & 60.0\\
-    Copper & 23.1 & 83.4 & 73 & 59.9 \\
-    \hline
-\end{tabular}
-\caption{Data taken on 15 Jan 2025}
-\vspace{1cm}
-\centering
-\begin{tabular}{|ccccc|}
-    \hline
-    Material & $T_i$ (\si{\celsius}) & $T_f$ (\si{\celsius}) &  $\Delta L$ ($10^{-5}$ m) & Length (cm) \\
-    \hline
-    Brass & 24.8 & 70.0 & 86&  60.0\\
-    Brass & 26.6 & 59.9 & 81 & 60.0\\
+    Copper 	& 24.0     & 59.8 & 75 \\
+    Copper 	& 25.5-24.5-25.5 & 59.7 & 74\\
+    Aluminium 	& 24.0-23.0-24.7 & 59.9 & 105\\
+    Brass 	& 24.1-23.2-24.3 & 59.7 & 85 \\
+    Steel 	& 22.1-24.8-20.5 & - & 74 \\
+    Aluminium 	& 24.3-23.7-24.3 & 59.8 & 104\\
+    Brass 	& 23.7-22.4-24.3 & 60.0 & 85 \\
+    Steel 	& 24.6-25.3 & 59.9 & 76 \\
+    Brass	& 24.8-25.3 & 60.1 & 86 \\
+    Steel 	& 23.3-23.5 & 59.7 & 76 \\ 
     \hline
 \end{tabular}
-\caption{Data taken on 17 Jan 2025, Rod having uneven temperature, mean  temperature is taken for calculations}
-
+\caption{Data taken on 11 Mar 2025, the variables represents the property as described in the theory.}
 \end{table}
+Least count of scale: 0.1 cm  \\
+Least count of thermometer: 0.1 $\si{\celsius}$ \\
+Least count of spherometer: $10^{-5}$ m  \\
+
 
 \section{Uncertainties and Error Sources}
 \subsection{Measurement Uncertainties}
 \begin{itemize}
-    \item \textbf{Length Measurements:} Uncertainty of $\pm 0.05$ cm, expansion uncertainty of $\pm 5\times 10^{-6}$ m.
-    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.005$ \si{\kelvin} due to instrument resolution.
+    \item \textbf{Length Measurements:} Estimated uncertainty of $\pm 0.1$ cm due to not proper method of viewing, expansion uncertainty of $\pm 5\times 10^{-6}$ m.
+    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.05$ \si{\kelvin} due to instrument resolution.
 \end{itemize}
 
+\subsection{Random Errors}
+\begin{itemize}
+	\item Errors in the final value of $\alpha$ due to different rods having different material composition 
+\end{itemize}
 \subsection{Systematic Errors}
 \begin{itemize}
-    \item Steam temperature fluctuations affecting heating consistency.
-    \item Inconsistent contact between the thermometer and the metal rod.
-    \item Delayed response of the spherometer due to manual operation.
+	\item Errors from the uneven temperature of the rod during the initial temperature measurement
+	\item Improper contact between the thermometer and the metal rod during temperature measurement
 \end{itemize}
+
+
 
 \section{Calculation and Error Analysis}
 \subsection{Error Propagation}
-The uncertainty in $\alpha$ is given by:
+From the length and temperature uncertanity, the formula given in the thory the uncertanity will travel as: REFRENCE THE BOOOkThe uncertainty in $\alpha$ is given by the basic formula for error propagation.:
 \[
 \sigma_{\alpha} = \alpha \sqrt{\left( \frac{\sigma_{\Delta L}}{\Delta L} \right)^2 + \left( \frac{\sigma_L}{L} \right)^2 + \left( \frac{\sigma_{\Delta T}}{\Delta T} \right)^2}
 \]
 where $\sigma_{\Delta L}, \sigma_L, \sigma_{\Delta T}$ are the uncertainties in expansion length, initial length, and temperature difference, respectively.
 
 \subsection{Calculation}
-From the Python calculations, we get:\footnote{Refer to \cite{github} for calculations}
+We calculate the value of $\alpha$ of all data points and their uncertainity from hte above formul,  we get:\footnote{Refer to \cite{github} for calculations}
 
 \begin{table}[h]
 \centering
@@ -118,16 +165,19 @@ From the Python calculations, we get:\footnote{Refer to \cite{github} for calcul
 \hline
 Material & $\alpha$ (\si{1/\degreeCelsius}) \\
 \hline
-Copper & $(2.94 \pm 0.12) \times 10^{-5}$ \\
-Brass & $(2.61 \pm 0.09) \times 10^{-5}$ \\
-Steel & $(2.19 \pm 0.07) \times 10^{-5}$ \\
-Steel & $(1.99 \pm 0.07) \times 10^{-5}$ \\
-Brass & $(2.52 \pm 0.08) \times 10^{-5}$ \\
-Aluminium & $(3.42 \pm 0.12) \times 10^{-5}$ \\
-Copper & $(2.00 \pm 0.06) \times 10^{-5}$ \\
-Brass & $(3.17 \pm 0.12) \times 10^{-5}$ \\
-Brass & $(4.10 \pm 0.19) \times 10^{-5}$ \\
+Aluminium & $(2.303 \pm 0.005) \times 10^{-5}$ \\
+Aluminium & $(2.291\pm 0.005) \times 10^{-5}$ \\
+Brass & $(1.870\pm 0.004) \times 10^{-5}$ \\
+Brass & $(1.851\pm 0.004) \times 10^{-5}$ \\
+Brass & $(1.909\pm 0.004) \times 10^{-5}$ \\
+Copper & $(1.650\pm 0.003) \times 10^{-5}$ \\
+Copper & $(1.656\pm 0.003) \times 10^{-5}$ \\
+Steel & $(1.591\pm 0.003) \times 10^{-5}$ \\
+Steel & $(1.691\pm 0.003) \times 10^{-5}$ \\
+Steel & $(1.662\pm 0.003) \times 10^{-5}$ \\
 \hline
+
+
 \end{tabular}
 \caption{Calculated expansion coefficients}
 \end{table}
@@ -135,25 +185,175 @@ Brass & $(4.10 \pm 0.19) \times 10^{-5}$ \\
 \section{Result}
 The calculated values of $\alpha$ show high precision but large variations from expected values. The inconsistencies suggest experimental errors, leading to unreliable results.
 
-\textbf{Possible causes:}
-\begin{itemize}
-    \item Temperature inconsistencies across different trials.
-    \item Changing steam temperature.
-    \item Uneven heating of the rod.
-    \item Not having constant temperature across the rod, making it hard to determine the temperature of it.
-\end{itemize}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{tikzpicture}
+  % Set up the axis with custom dimensions, white background,
+  % and y-axis starting at 7 for better visibility of error bars.
+  \begin{axis}[
+      width=12cm,
+      height=10cm,              % Increased height for clear error bar visibility
+      xlabel={Material},
+      ylabel={Linear Expansion Coefficient ($\times 10^{-6} \alpha$)},
+      xtick={1,2,3,4},
+      xticklabels={Aluminium, Brass, Copper, Steel},
+      ymin=7, ymax=26,          % y-axis range from 7 to 26
+      ymajorgrids=true,
+      axis background/.style={fill=white}, % Set the background to white instead of pink
+      legend style={at={(0.5,-0.15)},anchor=north,legend columns=2},
+  ]
+
+  % Add legend entries:
+  % - Theoretical range (displayed as a colored rectangle)
+  % - Observed value with error bars (red dot with black error bars)
+  \addlegendimage{area legend, fill=gray!30, draw=black}
+  \addlegendentry{Theoretical range}
+  \addlegendimage{only marks, mark=*, mark options={red}}
+  \addlegendentry{Observed value $\pm0.2$}
+
+  %-------------------------------
+  % Plot theoretical ranges as colored rectangles
+  % Each rectangle represents the range for the material.
+  % The width of 0.6 units (from x-0.3 to x+0.3) centers the rectangle at the xtick.
+  
+  % Aluminium: theoretical range [21, 24]
+  \addplot [draw=black, fill=blue!30] coordinates {
+    (1-0.3,21) % Bottom left corner
+    (1+0.3,21) % Bottom right corner
+    (1+0.3,24) % Top right corner
+    (1-0.3,24) % Top left corner
+  } \closedcycle; % Close the cycle to form a rectangle
+
+  % Brass: theoretical range [18, 19]
+  \addplot [draw=black, fill=green!30] coordinates {
+    (2-0.3,18)
+    (2+0.3,18)
+    (2+0.3,19)
+    (2-0.3,19)
+  } \closedcycle;
+
+  % Copper: theoretical range [16, 16.7]
+  \addplot [draw=black, fill=orange!30] coordinates {
+    (3-0.3,16)
+    (3+0.3,16)
+    (3+0.3,16.7)
+    (3-0.3,16.7)
+  } \closedcycle;
+
+  % Steel: theoretical range [9.9, 17.3]
+  \addplot [draw=black, fill=purple!30] coordinates {
+    (4-0.3,9.9)
+    (4+0.3,9.9)
+    (4+0.3,17.3)
+    (4-0.3,17.3)
+  } \closedcycle;
+
+  %-------------------------------
+  % Plot observed values with error bars:
+  % The observed values are marked with red dots.
+  % The error bars are drawn with a solid, dark black line and the caps are filled black.
+  % The error bars extend ±0.2 in the y-direction.
+  \addplot+[
+      only marks,
+      mark=*,
+      mark options={red}, % Red dot for the observed value
+      error bars/.cd,
+      y dir=both,        % Error bars in both upward and downward directions
+      y explicit,        % Use the explicit error value provided
+      error bar style={color=black, line width=1pt, solid}, % Solid, dark black error bars
+ %     error mark options={draw=black, fill=black, solid} % Filled black error bar caps
+  ] coordinates {
+      (1,22.75) +- (0,0.2) % Aluminium observed value with ±0.2 error
+  };
+
+  \addplot+[
+      only marks,
+      mark=*,
+      mark options={red},
+      error bars/.cd,
+      y dir=both,
+      y explicit,
+      error bar style={color=black, line width=1pt, solid},
+  ] coordinates {
+      (2,18.59) +- (0,0.2) % Brass observed value with ±0.2 error
+  };
+
+  \addplot+[
+      only marks,
+      mark=*,
+      mark options={red},
+      error bars/.cd,
+      y dir=both,
+      y explicit,
+      error bar style={color=black, line width=1pt, solid},
+  ] coordinates {
+      (3,16.4) +- (0,0.2) % Copper observed value with ±0.2 error
+  };
+
+  \addplot+[
+      only marks,
+      mark=*,
+      mark options={red},
+      error bars/.cd,
+      y dir=both,
+      y explicit,
+      error bar style={color=black, line width=1pt, solid},
+  ] coordinates {
+      (4,16.32) +- (0,0.2) % Steel observed value with ±0.2 error
+  };
+
+  \end{axis}
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% CHANGE THEO: https://en.wikipedia.org/wiki/Thermal_expansion
+
+
+\vspace{1cm}
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
-Due to these issues, we consider this experiment is inconclusive in determining values of the coefficients.
-       }%
+    Lets fucking go   
+
+    }%
 }\\
 
 \noindent\rule{\linewidth}{0.4pt}
-\vspace{1cm}
-
+\hfill
 \appendix
 \section{Theoretical Values}
 The expected values of $\alpha$ in \si{\per\celsius} are:\footnote{\cite{alpha}}
