@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 from scipy.odr import RealData, Model, ODR
 
 l = np.array([16, 18, 20, 24, 30, 35, 40])
@@ -14,8 +15,11 @@ i_least = 10**-7
 ln_l_err = (l_least /2)/l
 ln_i_err = (i_least /2)/i
 
+font = {'family' : 'normal',
+        'weight' : 'bold',
+        'size'   : 22}
 
-
+matplotlib.rc('font', **font)
 
 def mxc(params, x):
         m, c  = params
@@ -32,10 +36,8 @@ plt.plot(x_fit, y_fit, label='Linear ODR Fir')
 plt.xlabel('ln(Distance (m))')
 plt.ylabel('ln(Current (A))')
 plt.legend()
-
-
-
-
+plt.show()
+exit()
 
 
 # Provided data (wavelengths in nm and current in A)

@@ -2,16 +2,16 @@ import math
 import numpy as np
 # Original data list
 data = [
-    ("Aluminium", "24.0-23.0-24.7", 100.0, 59.9, 105),
-    ("Brass",     "24.1-23.2-24.3", 100.0, 59.7, 85),
-    ("Steel",     "22.1-24.8-20.5", 100.0, 60.0, 74),
-    ("Aluminium", "24.3-23.7-24.3", 100.0, 59.8, 104),
-    ("Brass",     "23.7-22.4-24.3", 100.0, 60.0, 85),
-    ("Steel",     "24.6-25.3",      100.0, 59.9, 76),
-    ("Brass",     "24.8-25.3",      100.0, 60.1, 86),
-    ("Steel",     "23.3-23.5",      100.0, 59.7, 76),
-    ("Copper",    "24.0",           100.0, 59.8, 75), 
-    ("Copper",    "25.5-24.5-25.5", 100.0, 59.7, 74)
+    ("Aluminium", "24.0-23.0-24.7", 99.0, 59.9, 105),
+    ("Brass",     "24.1-23.2-24.3", 99.0, 59.7, 85),
+    ("Steel",     "22.1-24.8-20.5", 99.0, 60.0, 74),
+    ("Aluminium", "24.3-23.7-24.3", 99.0, 59.8, 104),
+    ("Brass",     "23.7-22.4-24.3", 99.0, 60.0, 85),
+    ("Steel",     "24.6-25.3",      99.0, 59.9, 76),
+    ("Brass",     "24.8-25.3",      99.0, 60.1, 86),
+    ("Steel",     "23.3-23.5",      99.0, 59.7, 76),
+    ("Copper",    "24.0",           99.0, 59.8, 75), 
+    ("Copper",    "25.5-24.5-25.5", 99.0, 59.7, 74)
 ]
 
 # Create a new data list by converting the second column of each entry into a list of floats.
@@ -21,7 +21,7 @@ data = [
 ]
 delta_L_uncertainty = 1e-6 /2  # meters
 L_uncertainty = 1e-3       # meters
-temp_uncertainty = 0.1     /2  # Celsius
+temp_uncertainty = 1     /2  # Celsius
 
 results = []
 

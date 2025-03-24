@@ -1,0 +1,167 @@
+\documentclass[%
+ jor,
+ amsmath,amssymb,
+ reprint,
+]{revtex4-2}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{placeins}
+\usepackage{float}
+
+
+\begin{document}
+
+\title{Experiment 9\\Brewster's Angle}
+
+\author{Aumshree P. Shah\\20231059}
+\altaffiliation{\color{red}aumshree.pinkalbenshah@students.iiserpune.ac.in}
+\date{\today}
+
+\begin{abstract}
+\centering
+In this experiment reflective index of a transparent material is measured using Brewster's angle.
+\end{abstract}
+
+\maketitle
+\section{Theory and Procedure}
+\subsection{Apparatus}
+\small
+\begin{itemize}
+	\item Breadboard\item Laser diode\item Polariser rotator\item Glass slide
+\item Rotation stage\item Photodetector\item Detector output unit
+\end{itemize}
+
+\subsection{Theory}
+A beam of light incident oon a dielectric transparent material can be resolved into parallel(P) and orthogonal(S) components. These components have different reflection coefficients and Brewster discovered that at a particular angle of incidence $\partial_B$ (called Brewster's angle), the reflection coefficient of P-component goes to zero. At this angle direction of reflectied and transmitted beam are orthogonal to each other. \\
+
+By Snell's law, \begin{equation} \tan \partial_B = n
+\end{equation}
+where $n$ is the refractive index of the material
+\subsection{Procedure}
+\begin{enumerate}
+	\item Read the user manual \textbf{ENTER A REFRNCE 4 HERE}
+	\item Mount diode laser to the laser mount.
+	\item Switch on the laser and place the polariser rotator & analyser in front of it so as to make the $E$ field parallel to breadboard.
+	\item Mount the glass slide on the rotation stage.
+	\item Orient the microscope slide to reflect the laser beam back into the laser output aperture.
+	\item Rotate the glass slide slowly and note the corresponding degree with intensity of the reflected beam from the glass slide.
+	\item The intensity has a  minimum (almost zero) at Brewster's angle $\partial_B$. 
+	\item Using Equation-1, calculate the reflective index $n$.
+\end{enumerate}
+\subsubsection{Precautions}
+\begin{itemize}
+	\item Make sure the laser output is larger than the photo detector's input area.
+\end{itemize}
+\section{Observations}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|ccc|}
+    \hline
+    & $T_i$ (\si{\celsius})  & Length (cm) & $\Delta L$ ($10^{-5}$ m)\\
+    \hline
+    Copper 	& 24.0     & 59.8 & 75 \\
+    Copper 	& 25.5-24.5-25.5 & 59.7 & 74\\
+    Aluminium 	& 24.0-23.0-24.7 & 59.9 & 105\\
+    Brass 	& 24.1-23.2-24.3 & 59.7 & 85 \\
+    Steel 	& 22.1-24.8-20.5 & - & 74 \\
+    Aluminium 	& 24.3-23.7-24.3 & 59.8 & 104\\
+    Brass 	& 23.7-22.4-24.3 & 60.0 & 85 \\
+    Steel 	& 24.6-25.3 & 59.9 & 76 \\
+    Brass	& 24.8-25.3 & 60.1 & 86 \\
+    Steel 	& 23.3-23.5 & 59.7 & 76 \\ 
+    \hline
+\end{tabular}
+\caption{Data taken on 11 Mar 2025, the variables represents the property as described in the theory. The '-' value is assumed to be 60.0 cm.}
+
+\end{table}
+\noindent Least count of scale: \uline{0.1 cm}  \\
+Least count of thermometer:  \uline{ 0.1 $\si{\celsius}$ }\\
+Least count of spherometer:  \uline{$10^{-5}$ m } \\
+
+
+\section{Uncertainties and Error Sources}
+\subsection{Measurement Uncertainties}
+\begin{itemize}
+    \item \textbf{Length Measurements:} Estimated uncertainty of $\pm 0.1$ cm due to not proper method of viewing, expansion uncertainty of $\pm 5\times 10^{-6}$ m.
+    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.05$ \si{\kelvin} due to instrument resolution.
+\end{itemize}
+
+
+
+\section{Calculation and Error Analysis}
+\subsection{Error Propagation}
+From the length and temperature uncertainty, and using Equation-1 uncertainty in $\alpha$, by the basic formula for error propagation$^{[1]}$ will propogate as .:
+\[
+\sigma_{\alpha} = \alpha \sqrt{\left( \frac{\sigma_{\Delta L}}{\Delta L} \right)^2 + \left( \frac{\sigma_L}{L} \right)^2 + \left( \frac{\sigma_{\Delta T}}{\Delta T} \right)^2}
+\]
+where $\sigma_{\Delta L}, \sigma_L, \sigma_{\Delta T}$ are the uncertainties in expansion length, initial length, and temperature difference, respectively.
+
+\subsection{Calculation}
+We calculate the value of $\alpha$ of all data points and their uncertainity from hte above formul,  we get (Refer to [3] for calculations):
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\hline
+Material & $\alpha$ (\si{1/\degreeCelsius}) \\
+\hline
+Aluminium & $(2.33 \pm 0.02) \times 10^{-5}$ \\
+Aluminium & $(2.32\pm 0.02) \times 10^{-5}$ \\
+\hline
+\end{tabular}
+\caption{Calculated expansion coefficients}
+\end{table}
+
+\section{Result}
+	    The final expansion values by weighted average$^{[1]}$ are:\\
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$\alpha$ (1/\textdegree C)} & \textbf{Uncertainty (1/\textdegree C)} & \(\chi^2_\nu\) \\
+\hline
+Aluminium & \(2.328\times10^{-5}\) & \(6.1\times10^{-8}\) & 0.15 \\
+Brass     & \(1.90\times10^{-5}\) & \(1.73\times10^{-7}\) & 2.70 \\
+Copper    & \(1.674\times10^{-5}\) & \(3.60\times10^{-8}\) & 0.10 \\
+Steel     & \(1.67\times10^{-5}\) & \(3.07\times10^{-7}\) & 11.14 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+\appendix
+\section{Temperature of rod}\label{rodtemp}
+The temperature of rod measured with the application of thermal paste is found to be ranging between $98~\si{\celsius}-99~\si{\celsius}$ (measured on 19 Mar 2025)
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{erroranalysis}
+Preston, Daryl W. and Dietz, Eric R., \emph{The Art of Experimental Physics}. Available at: \url{http://ilide.info-daryl-w-preston-eric-r-dietz-the-art-of-exp    erimental-physics-wiley}
+
+\bibitem{wiki_thermalexpansion}
+Wikipedia, \emph{Brewster's Angle}, 2025. Available at: \url{https://en.wikipedia.org/wiki/Brewster%27s_angle}
+
+\bibitem{github_code}
+LAUGHINGCATMEME, \emph{PH2233 - Code Repository}, 2025. Available at: \url{github.com/LAUGHINGCATMEME/PH2233}
+\end{thebibliography}
+
+
+
+\end{document}

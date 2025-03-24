@@ -4,7 +4,7 @@
  amsmath,amssymb,
  reprint,
 ]{revtex4-2}
-
+\usepackage{ulem}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{siunitx}
@@ -17,6 +17,7 @@
 \pgfplotsset{compat=1.17}
 
 
+
 \begin{document}
 
 \title{Experiment 7\\Lee's Method}
@@ -27,7 +28,7 @@
 
 \begin{abstract}
 \centering
-In this experiment the thermal conductivity of a bad conductor is measured.
+In this experiment the thermal conductivity of a bad conductor is measured. 
 \end{abstract}
 
 \maketitle
@@ -37,95 +38,152 @@ In this experiment the thermal conductivity of a bad conductor is measured.
 \small
 \begin{minipage}{0.48\textwidth}
 \begin{itemize}
-	\item Lee’s Apparatus
-	\item Bad conductor discs 
-	\item Two thermometers
-	\item Boiler and Induction
+\item Lee’s Apparatus \item Bad conductor discs \item Two thermometers \item Boiler and Induction 
 \end{itemize}
 \end{minipage}
 \begin{minipage}{0.48\textwidth}
 \begin{itemize}
-	\item Stop watch 
-	\item Weighing balance 
-	\item  Vernier Caliper 
-	\item  Screw gauge
+	\item Stop watch \item Weighing balance \item Vernier Caliper \item Screw gauge
 \end{itemize}
 \end{minipage}
 \subsection{Theory}
-Fourier’s Law of heat conductance gives the rate of transfer of heat between two objects at temperatures T2 and T1 connected by a conductor with conductivity k and cross-sectional areas A (assumed uniform) and length l as %∆Q ∆t = k A l (T2 −T1) This equation governs the rate of heat transfer from disc D2 to D1 in the first half of the experiment. The instantaneous rate at which a warm body loses heat to surroundings is given by Newton’s law of cooling (which is a special case of Stefan’s law, when the temperature differences are small, and there are losses other than radiative losses). dT dt = −b(T −Ta), where Ta is the ambient temperature. This law governs the rate at which the disc D1 cools in the second half of the experiment. If m is the mass of the disk and s is the specific heat of the material of D1 (brass in this case), then the rate at which heat is lost by the disc D1 ∆Q1 ∆t = ms(dT1/dt) 
+Fourier’s law of heat conductance gives the rate of transfer of heat between two objects at temperatures ${T_1}$ and ${T_2}$ connected by a conductor with conductivity $k$, uniform cross-sectional area $A$, and length $l$ as 
+\[
+\frac{\Delta Q}{\Delta t} = k\,A\,l\,\left({T_2}-{T_1}\right).
+\]
+This equation governs the rate of heat transfer from disc ${D_2}$ to disc ${D_1}$ (the bottom and top discs of Lee’s apparatus, respectively).\\
 
+The instantaneous rate at which a warm body loses heat to its surroundings is given by Newton’s law of cooling,
+\[
+\frac{dT}{dt} = -b\,(T-T_a),
+\]
+where $T_a$ is the ambient temperature. This law governs the rate at which disc ${D_1}$ cools in the second half of the experiment.
+If $m$ is the mass of disc ${D_1}$ and $s$ is the specific heat of its material, then the rate at which heat is lost by the disc is 
+\[
+\frac{\Delta Q_1}{\Delta t} = m\,s\,\frac{dT_1}{dt}.
+\]\\
+
+In the steady state achieved in the first half of the experiment, the heat supplied by the steam is balanced by the cooling of disc ${D_1}$. Combining the two heat transfer equations gives the heat balance
+\begin{equation}
+m\,s\,\frac{dT}{dt} = k\,A\,l\,\left({T_2}-{T_1}\right).
+\end{equation}
+The value of $\frac{dT}{dt}$ for disc ${D_1}$ can be determined from the cooling curve obtained in the second part of the experiment. As an approximation, a single value of $\frac{dT}{dt}$, calculated at ${T_1}$ during the cooling of disc ${D_1}$ from ${T_1} + \SI{10}{\celsius}$ to ${T_1} - \SI{7}{\celsius}$, is used.
+From the known value $s=\SI{0.380}{J\,g^{-1}\,K^{-1}}$ for brass, the conductivity $k$ can be determined.
+Note that if the two thermometers do not initially show the same reading, the temperature difference ${T_2}-{T_1}$ must be corrected by the quantity ${T'}$ determined at the beginning of the experiment.
 
 \subsection{Procedure}
 \begin{enumerate}
-\item Fill the boiler with water to nearly half and heat it to produce steam. In the mean time, weigh the disc D1 on which the apparatus rests. Further, measure the diameter of specimen disc d with a vernier calliper and its thickness using a screw gauge at several spaces and determine the mean thickness. Clamp the glass specimen between the base disk D2 of the steam jacket and the auxiliary brass disc D1. Insert the thermometers (either mercury thermometer or thermocouples) in the two brass disks D1,D2. Check if they show the same readings at room temperatu%re. If not, note the difference T ′. Connect the boiler outlet with the inlet of the steam chamber by a rubber tube. Continue passing steam until the two brass disks reach a steady temperature. Note down the temperatures T1 and T2 of the two discs. The second part of the experiment involves the determination of the cooling rate of disc D1 alone. Remove the sample disc. Heat the disc D1 directly by the steam chamber till its temperature is about T1 +1%0◦C. Remove the steam chamber and place the insulating disk on it. Record the temperature of the brass disc at half minute intervals. Continue till the temperature falls to about T1 −7◦
-
+    \item Fill the boiler with water to nearly half and heat it to produce steam. In the meantime, weigh the disc ${D_1}$ on which the apparatus rests.
+    \item Measure the diameter of specimen disc $d$ with a vernier calliper and its thickness using a screw gauge at several points, and determine the mean thickness.
+    \item Clamp the glass specimen between the base disk ${D_2}$ of the steam jacket and the auxiliary brass disc ${D_1}$. Insert the thermometers (either mercury thermometer or thermocouples) in the two brass disks ${D_1}$ and ${D_2}$.
+    \item Check if they show the same readings at room temperature. If not, note the difference $T'$.
+    \item Connect the boiler outlet with the inlet of the steam chamber by a rubber tube. Continue passing steam until the two brass disks reach a steady temperature. Note down the temperatures $T_1$ and $T_2$ of the two discs.
+    \item The second part of the experiment involves the determination of the cooling rate of disc ${D_1}$ alone. Remove the sample disc. Heat the disc ${D_1}$ directly by the steam chamber until its temperature is about $T_1 + \SI{10}{\celsius}$.
+    \item Remove the steam chamber and place the insulating disk on it. Record the temperature of the brass disc at half-minute intervals. Continue until the temperature falls to about $T_1 - \SI{7}{\celsius}$.
 \end{enumerate}
+
+
+
 \subsubsection{Precautions}
 \begin{itemize}
-\item PRECAUTIONS
+	\item Use thermal gloves while working with the instrument.
+	\item Make sure all the contacts are proper.
+	\item 
 \end{itemize}
+
+
+
 \section{Observations}
+\noindent Least count of weighing scale:   \uline{1 g}  \\
+Least count of thermometer:  \uline{ 0.5 $\si{\celsius}$ }\\
+Least count of vernier calliper:  \uline{$10^{-4}$ m } \\
+Least count of screw gauge:  \uline{$10^{-5}$ m } \\
+
+\noindent $T'=0$\\
+\noindent$M_{D_1} = $ 905 g
+
+
 
 \begin{table}[h]
 \centering
-
-Mass of D1 = % ADD A UNDERLINE HERE
-in all variables add a underline
-
-
-
-\begin{tabular}{|c|ccc|}
+\begin{tabular}{|c|c|c|}
     \hline
-    Material & $T_i$ (\si{\celsius})  & Length (cm) & $\Delta L$ ($10^{-5}$ m)\\
+    Material & Diameter $(10^{-5} \si{\meter})$  & Length (cm) \\
     \hline
-    Copper 	& 24.0     & 59.8 & 75 \\
-    Copper 	& 25.5-24.5-25.5 & 59.7 & 74\\
-    Aluminium 	& 24.0-23.0-24.7 & 59.9 & 105\\
-    Brass 	& 24.1-23.2-24.3 & 59.7 & 85 \\
-    Steel 	& 22.1-24.8-20.5 & - & 74 \\
-    Aluminium 	& 24.3-23.7-24.3 & 59.8 & 104\\
-    Brass 	& 23.7-22.4-24.3 & 60.0 & 85 \\
-    Steel 	& 24.6-25.3 & 59.9 & 76 \\
-    Brass	& 24.8-25.3 & 60.1 & 86 \\
-    Steel 	& 23.3-23.5 & 59.7 & 76 \\ 
+    Glass	& 410-376-376-376-376 & 11.80\\
+    Ebonite 	& 203-119-197-201-199 & 11.20-11.30\\
+    Rubber 	& 331 & 9.88-10.00\\
     \hline
 \end{tabular}
-\caption{Data taken on 11 Mar 2025, the variables represents the property as described in the theory.}
-\end{table}
-Least count of scale: 0.1 cm  \\
-Least count of thermometer: 0.1 $\si{\celsius}$ \\
-Least count of spherometer: $10^{-5}$ m  \\
+\caption{Data taken on 19 Mar 2025, the different observations are seperated by '-'.}
 
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+    \hline
+    Material & $T_1 (\si{\celsius})$  &  $T_1 (\si{\celsius})$ \\
+    \hline
+    Glass	& 86.0 & 95.0\\
+    Ebonite 	& 76.0& 94.5\\
+    Rubber 	& 84.0& 95.0 \\
+    \hline
+\end{tabular}
+\caption{Data taken on 19 Mar 2025, the different observations are seperated by '-'.}
+\end{table}
+\begin{table}[H]
+\label{tab:}
+\centering
+  \begin{tabular}{|c|c|}
+	  \hline
+	  $T~\si{\celsius}$   &  $t$ (sec)\\
+	  \hline
+ 91.5   &7 \\
+	  90.5 & 8 \\
+	  89.5 & 11 \\
+	  88.5 & 11 \\
+	  87.5 & - \\
+	  86.5 & - \\
+	  85.5 & 16 \\
+	  84.5 & 17 \\
+	  83.5 & - \\
+	  82.5 & 21 \\
+	  81.5 & 21 \\
+	  80.5 & 19 \\
+	  79.5 & 23 \\
+	  78.5 & 22 \\
+	  77.5 & 22 \\
+	  \hline
+  \end{tabular}
+  \caption{Data taken on 21 Mar 2025, the rate of cooling for $D_2$ where $T$ is the mean of floor and celing of the one degree temperature range.}
+\end{table}
 
 \section{Uncertainties and Error Sources}
 \subsection{Measurement Uncertainties}
 \begin{itemize}
-    \item \textbf{Length Measurements:} Estimated uncertainty of $\pm 0.1$ cm due to not proper method of viewing, expansion uncertainty of $\pm 5\times 10^{-6}$ m.
+	\item \textbf{Weight Measurements:}
+    \item \textbf{Length Measurements:} 
     \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.05$ \si{\kelvin} due to instrument resolution.
 \end{itemize}
-
 \subsection{Random Errors}
 \begin{itemize}
-	\item Errors in the final value of $\alpha$ due to different rods having different material composition 
+	\item STUFF
 \end{itemize}
+
 \subsection{Systematic Errors}
 \begin{itemize}
-	\item Errors from the uneven temperature of the rod during the initial temperature measurement
-	\item Improper contact between the thermometer and the metal rod during temperature measurement
+	\item STUFF
 \end{itemize}
 
 
 
 \section{Calculation and Error Analysis}
 \subsection{Error Propagation}
-From the length and temperature uncertanity, the formula given in the thory the uncertanity will travel as: REFRENCE THE BOOOkThe uncertainty in $\alpha$ is given by the basic formula for error propagation.:
-\[
-\sigma_{\alpha} = \alpha \sqrt{\left( \frac{\sigma_{\Delta L}}{\Delta L} \right)^2 + \left( \frac{\sigma_L}{L} \right)^2 + \left( \frac{\sigma_{\Delta T}}{\Delta T} \right)^2}
-\]
-where $\sigma_{\Delta L}, \sigma_L, \sigma_{\Delta T}$ are the uncertainties in expansion length, initial length, and temperature difference, respectively.
-
+Using Equation-1 we get: k = ms l A T ˙T2 -T1 From the length, temperature and mass uncertainty, the error to k will travel using the formula for error propagation as: ENTER A BOOK ERROR PROPER HERE 
 \subsection{Calculation}
-We calculate the value of $\alpha$ of all data points and their uncertainity from hte above formul,  we get:\footnote{Refer to \cite{github} for calculations}
+We calculate the value of $\alpha$ of all data points and their uncertainity from hte above formul,  we get (Refer to [3] for calculations):
 
 \begin{table}[h]
 \centering
@@ -133,16 +191,17 @@ We calculate the value of $\alpha$ of all data points and their uncertainity fro
 \hline
 Material & $\alpha$ (\si{1/\degreeCelsius}) \\
 \hline
-Aluminium & $(2.303 \pm 0.005) \times 10^{-5}$ \\
-Aluminium & $(2.291\pm 0.005) \times 10^{-5}$ \\
-Brass & $(1.870\pm 0.004) \times 10^{-5}$ \\
-Brass & $(1.851\pm 0.004) \times 10^{-5}$ \\
-Brass & $(1.909\pm 0.004) \times 10^{-5}$ \\
-Copper & $(1.650\pm 0.003) \times 10^{-5}$ \\
-Copper & $(1.656\pm 0.003) \times 10^{-5}$ \\
-Steel & $(1.591\pm 0.003) \times 10^{-5}$ \\
-Steel & $(1.691\pm 0.003) \times 10^{-5}$ \\
-Steel & $(1.662\pm 0.003) \times 10^{-5}$ \\
+Aluminium & $(2.33 \pm 0.02) \times 10^{-5}$ \\
+Aluminium & $(2.32\pm 0.02) \times 10^{-5}$ \\
+Brass & $(1.90\pm 0.02) \times 10^{-5}$ \\
+Brass & $(1.88\pm 0.02) \times 10^{-5}$ \\
+Brass & $(1.92\pm 0.02 \times 10^{-5}$ \\
+Copper & $(1.67\pm 0.02) \times 10^{-5}$ \\
+Copper & $(1.68\pm 0.02) \times 10^{-5}$ \\
+Steel & $(1.61\pm 0.02) \times 10^{-5}$ \\
+Steel & $(1.71\pm 0.02) \times 10^{-5}$ \\
+Steel & $(1.68\pm 0.02) \times 10^{-5}$ \\
+
 \hline
 
 
@@ -151,19 +210,21 @@ Steel & $(1.662\pm 0.003) \times 10^{-5}$ \\
 \end{table}
 
 \section{Result}
-The calculated values of $\alpha$ show high precision but large variations from expected values. The inconsistencies suggest experimental errors, leading to unreliable results.
-
-
-
-
-
-
-
-
-
-
-
-
+	    The final expansion values by weighted average$^{[1]}$ are:\\
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Material} & \textbf{$\alpha$ (1/\textdegree C)} & \textbf{Uncertainty (1/\textdegree C)} & \(\chi^2_\nu\) \\
+\hline
+Aluminium & \(2.328\times10^{-5}\) & \(6.1\times10^{-8}\) & 0.15 \\
+Brass     & \(1.90\times10^{-5}\) & \(1.73\times10^{-7}\) & 2.70 \\
+Copper    & \(1.674\times10^{-5}\) & \(3.60\times10^{-8}\) & 0.10 \\
+Steel     & \(1.67\times10^{-5}\) & \(3.07\times10^{-7}\) & 11.14 \\
+\hline
+\end{tabular}
+\end{table}
 
 
 
@@ -191,7 +252,7 @@ The calculated values of $\alpha$ show high precision but large variations from 
   \addlegendimage{area legend, fill=gray!30, draw=black}
   \addlegendentry{Theoretical range}
   \addlegendimage{only marks, mark=*, mark options={red}}
-  \addlegendentry{Observed value $\pm0.2$}
+  \addlegendentry{Observed values}
 
   %-------------------------------
   % Plot theoretical ranges as colored rectangles
@@ -234,7 +295,6 @@ The calculated values of $\alpha$ show high precision but large variations from 
   % Plot observed values with error bars:
   % The observed values are marked with red dots.
   % The error bars are drawn with a solid, dark black line and the caps are filled black.
-  % The error bars extend ±0.2 in the y-direction.
   \addplot+[
       only marks,
       mark=*,
@@ -245,7 +305,7 @@ The calculated values of $\alpha$ show high precision but large variations from 
       error bar style={color=black, line width=1pt, solid}, % Solid, dark black error bars
  %     error mark options={draw=black, fill=black, solid} % Filled black error bar caps
   ] coordinates {
-      (1,22.75) +- (0,0.2) % Aluminium observed value with ±0.2 error
+      (1,23.28) +- (0,0.06) % Aluminium observed value with ±0.2 error
   };
 
   \addplot+[
@@ -257,7 +317,7 @@ The calculated values of $\alpha$ show high precision but large variations from 
       y explicit,
       error bar style={color=black, line width=1pt, solid},
   ] coordinates {
-      (2,18.59) +- (0,0.2) % Brass observed value with ±0.2 error
+      (2,19.0) +- (0,0.17) % Brass observed value with ±0.2 error
   };
 
   \addplot+[
@@ -269,7 +329,7 @@ The calculated values of $\alpha$ show high precision but large variations from 
       y explicit,
       error bar style={color=black, line width=1pt, solid},
   ] coordinates {
-      (3,16.4) +- (0,0.2) % Copper observed value with ±0.2 error
+      (3,16.74) +- (0,0.04) % Copper observed value with ±0.2 error
   };
 
   \addplot+[
@@ -281,7 +341,7 @@ The calculated values of $\alpha$ show high precision but large variations from 
       y explicit,
       error bar style={color=black, line width=1pt, solid},
   ] coordinates {
-      (4,16.32) +- (0,0.2) % Steel observed value with ±0.2 error
+      (4,16.7) +- (0,0.3) % Steel observed value with ±0.2 error
   };
 
   \end{axis}
@@ -298,42 +358,25 @@ The calculated values of $\alpha$ show high precision but large variations from 
 
 
 
-
-
-
-
-
-
-
-
-
-
-% CHANGE THEO: https://en.wikipedia.org/wiki/Thermal_expansion
-
-
-\vspace{1cm}
-
-\noindent\fbox{%
-    \parbox{\textwidth}{%
-    Lets fucking go   
-
-    }%
-}\\
-
 \noindent\rule{\linewidth}{0.4pt}
-\hfill
 
+\newpage
 \appendix
 \section{Theoretical Values}
-The expected values of $\alpha$ in \si{\per\celsius} are:\footnote{\cite{alpha}}
+The expected values of $\alpha$ in \si{\per\celsius} are [4]:
 \[
 \begin{split}
-\alpha_{\text{Steel}} &\approx (1.08 - 1.25) \times 10^{-5}\\
-\alpha_{\text{Brass}} &\approx (1.8 - 1.9) \times 10^{-5}\\
-\alpha_{\text{Aluminium}} &\approx (2.1 - 2.4) \times 10^{-5}\\
-\alpha_{\text{Copper}} &\approx 1.78 \times 10^{-5}
+\alpha_{\text{Steel}} &= (0.99 - 1.73) \times 10^{-5}\\
+\alpha_{\text{Brass}} &= (1.8-1.9) \times 10^{-5}\\
+\alpha_{\text{Aluminium}} &= (2.1 - 2.4) \times 10^{-5}\\
+\alpha_{\text{Copper}} &= (1.6 - 1.67) \times 10^{-5}
 \end{split}
 \]
 
-\bibliography{aipsamp}
+\section{Temperature of rod}\label{rodtemp}
+The temperature of rod measured with the application of thermal paste is found to be ranging between $98~\si{\celsius}-99~\si{\celsius}$ (measured on 19 Mar 2025)
+
+
+
+
 \end{document}

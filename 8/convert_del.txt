@@ -1,0 +1,146 @@
+Calibrating the micrometer :
+
+For more accurate measurements of the mirror movement, you can use a green (532nm) laser to
+calibrate the micrometer.
+
+Turn the micrometer knob as you count off at least 20 fringes. Carefully note the change in the
+micrometer reading and record this value as d’. The actual mirror movement d = N 4/2, where
+
+iis the known wave length of the laser and N is the number of fringes that were counted. A=d/d’
+is the calibration constant for the micrometer.
+
+Determination of wavelength of laser beam :
+
+For finding the wavelength of laser source , we are using Red doide laser. Set the interferometer
+with red laser. Note the initial position of the micrometer.
+
+Turn the micrometer knob as you count off at least 20 fringes. Carefully note the change in the
+
+micrometer reading and record this value as d.
+
+The wavelength of laser is calculated by:
+
+XK =(Q2d/N)A
+
+where ‘d’ is the change in position that occurs for ‘N’ fringes to
+
+pass and ‘A’ is the calibration constant of the micrometer as we found in early
+experiment.
+
+=: Refractive Index of Transparent material
+
+Theory :
+
+The light passes through a greater length of
+glass as the plate is rotated. The change in
+the path length of the light beam as the glass
+plate is rotated and relates the change in path
+length with the laser beam through air.
+
+The refractive index of glass slide,
+
+(2t - NA) (1 - cos@)
+
+2t (1 - cos6) - NA
+
+where t is the thickness of the glass slide, N is the number of fringes counted, 4 is the wave
+length oflightused and 6 isthe angle turned for N fringes.
+
+Procedure :
+
+Place the glass slide holder in one of the arms of the interferometer. Attach the glass slide to
+the rotation stage and make it perpendicular to the laser beam.
+
+Note: When glass plate is introduced in the optical path of Michelson interferometer, the fringe will be
+shifted & will become blur. To make the fringe sharp again, move mirror with translation to & fro till the
+clear set of fringes is achieved on the viewing screen.
+
+Hi
+
+Note the initial position of the glass slide from the dial. Rotate slowly by counting the number of
+fringes passing. Note the final reading.
+
+The difference is the angle of rotation 0
+
+2t (1 - cos6) - NA
+
+Vieasurements
+
+Least count of the rotation stage = .........0
+
+(2t - NA) (1 - cos®)
+
+Fringes are] tated :
+g ANGIC rots Refractive index
+
+Trial No Moved f
+| (N) Left Right
+
+Result :-
+
+Refractive index of Glass Slid@ N= ou... cee ce cece eens eee eee eens
+
+:: Refractive Index of Air
+
+Theory :
+
+When a piece of material of thickness d is
+placed in one arm of the Michelson
+Interferometer, the change in optical path
+length is given by 2dn where n is the
+difference in refractive index between the
+sample and the material it replaced (usually
+air). In other words, 2d (n,-n,,) / 4 extra
+wavelengths are introduced if air is replaced
+by asample of refractive index n,, .
+
+Let 2% bethe wavelength of light, nthe refractive index of air at atmospheric pressure, d the length
+of the air cell, P,,,,, the current atmospheric pressure and AP the pressure change. The relationship
+between the pressure change AP and the number of fringe shift m,, is given by,
+
+m,» = (2d (n-1)/) ( AP/P,,,)
+
+Procedure :
+
+For finding the refractive index of air, we are placing air chamber in one of the arms of the
+interferometer. Fix it with thumb screws.
+
+www.holmarc.com
+
+Plot a graph between number of fringes and the corresponding pressure. The slope of the graph
+will give the value m,,./AP. Put this value in the equation given below.
+
+my, = (2d (n-1)/2) (AP/P,,,)
+
+From the above equation, we can calculate the value of refractive index of air ‘n’.
+
+\Vieasurements
+
+21 Holmarc Opto Mechatronics Pvt. Ltd
+
+Y A
+4 Refractive index of air
+AP
+B Cc
+|
+>
+Map ».4
+We have,
+(my, /AP ) = (2d (n-1)/ A) (1/ P,.,)
+
+Il
+
+Length of the pressure cell d
+Wavelength of light used =
+m,, /AP from graph
+
+lI
+
+(n-1) = (m,y/ AP) (4/2d) P,,,,
+
+Substituting the values we can calculate refractive index of air.
+
+Result:-
+
+Refractive index of air Mo = kee ceeceeeeeeeeeee eee
+

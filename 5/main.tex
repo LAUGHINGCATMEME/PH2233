@@ -13,7 +13,6 @@
 ]{revtex4-2}
 
 
-\usepackage{natbib}
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
 \usepackage{circuitikz}
@@ -67,7 +66,7 @@ So when we plot the graph of $V_s$ as a function of $\nu$, the slope has a value
 	\item Read the user manual of the setup (Refer to Refernce-\cite{fsu_manual}).
   \item Insert the red color filter (635 nm), set light intensity switch at strong light, voltage direction switch at `-', display mode switch at current display.
   \item Adjust to de-accelerating voltage to 0 $V$  and set current range selector at X 0.001. Increase the de-accelerating to decrease the photo current to zero. Take down the de-accelerating voltage $(V_s)$ corresponding to zero current of 635 nm wavelength. Get the $V_s$ of other wave lengths, in the same way.
-  \item For verification of inverse square law, remove filters, fix the intensity of light around a proper value, and take the current values by varing the light source at different distance from the vaccum-tube.
+  \item For verification of inverse square law; remove filters, fix the intensity of light around a proper value, and take the current values by varing the light source at different distance from the vaccum-tube.
 \end{enumerate}
 
 
@@ -100,7 +99,7 @@ So when we plot the graph of $V_s$ as a function of $\nu$, the slope has a value
 
 \hline
 \end{tabular}
-\caption{Stopping voltage at different filters, with source at $l=25.0 \si{\centi\meter}$. Data taken on 11-Mar-2025}
+\caption{Stopping voltage at different filters, with source at $l=25.0 ~\si{\centi\meter}$. Data taken on 11-Mar-2025}
 \label{tab:table1}
 \[
 \boxed{
@@ -152,64 +151,56 @@ So when we plot the graph of $V_s$ as a function of $\nu$, the slope has a value
     All length values have an uncertainty of $\Delta l = \pm 0.5$ \si{\milli\meter} due to instrument resolution.    
 \item Current Measurements: Current values have an uncertainty of $\Delta A = \pm 5\times10^{-8}$ \si{\ampere} due to instrument resolution. 
     \item Voltage Measurements: Voltage values have an uncertainty of $\Delta V = \pm 0.005$ \si{\volt} due to instrument resolution. 
-    \item Filter Uncertanity: To account for the error in non-ideal filters, we take the uncertainity to be $\pm 5$ nm.
+    \item Filter Uncertanity: To account for the error in non-ideal filters, we assume the uncertainity to be $\pm 5$ nm.
 \end{itemize}
 
 \subsection{Systematic Errors}
-
+\begin{itemize}
+	\item Improper filters
+\end{itemize}
 \section{Calculation and Error Analysis}
 
 \subsection{Plank's constant}
-To calculate the Plank's constant we use Equation-2, and plot the graph of $V_s$ vs $\nu$. The slope of the graph will have value of $h/e$. Now since $c = \lambda\nu$, this gives us $\nu = c/\lambda$ and \textbf{ENTER A BOOK REFRENCE HERE} $$\Delta \nu = c\frac{\Delta \lambda}{\lambda^2}$$
+To calculate the Plank's constant we use Equation-2, and plot the graph of $V_s$ vs $\nu$. The slope of the graph will have value of $h/e$. Now since $c = \lambda\nu$, this gives us $\nu = c/\lambda$ and  (Refer to refrence-\cite{erroranalysis} for detailed analysis) $$\Delta \nu = c\frac{\Delta \lambda}{\lambda^2}$$
 
-Plotting the graph of $\nu \text{ vs } V_s$ with their respective uncertanity: \textbf{ENTER A CODE REFRENCE HERE} 
+Plotting the graph of $\nu \text{ vs } V_s$ with their respective uncertanity and finding a linear fit ($y=mx+b$) we get:  (Refer to refrence-\cite{github_code} for code):
 
-\includegraphics[scale=0.69]{image1}\\
-\includegraphics[scale=0.69]{image 2}
+\includegraphics[scale=0.31]{Figure_2}
 
-Optimized Parameters: [ 0.36404357 -1.41054501]
+where the fit parameters are $ m  =  0.36 \pm 0.03 $ and $  b =   -1.4 \pm 0.2 $ 
 
-Parameter Errors: [0.03307623 0.17843993]
 
 
 
 
 \subsection{Inverse Square Law}
-\includegraphics[scale=0.69]{image}
-Optimized Parameters: [ -2.04953181 -15.06801565]
-Parameter Errors: [0.08743895 0.14215498]
+Simmilarly for the verification of inverse square law, we plot the Distance vs Current graph in a log-log scale and calculate the fit variables. Plotting it we get:\\
+\includegraphics[scale=0.31]{Figure_1}
+where the fit parameters are $ m  = -2.05 \pm 0.09$ and $  b =  -15.07\pm 0.14$ 
 
 
 \section{Result}
-\ref{github}
+The value of $h$ calculated form fit parameters is
 
-The reference resistance was determined to be: $R_0 = 2.90 \pm 7.7\% $. (This error accounts for uncertainty in temperature measurements)\\
-
-The Stefan-Boltzmann fit for the tungsten filament showed:
 $$
-P = (4.00 \pm 0.066) \times 10^{-14}\ \mathrm{T^4}
+h = 5.83 \pm 0.53 ~\si{\joule\second}
 $$
-
-The log-log analysis revealed a power-law relationship:
+and for the current-distance relation, we get:
 $$
-\log P = (3.98 \pm 0.06)\log T + (-30.71 \pm 0.48)
+I \propto r^{ -2.05\pm0.09}
 $$
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
-       The measured slope of $m = 3.98 \pm 0.06$ agrees with Stefan's law prediction of $P \propto T^4$, as the theoretical value of 4 lies within the experimental uncertainty range.
+	    The measured value of $h$ doesn't quite agree with the actual value, this result is assumed to be caused by the systematic errors described in this paper. \\
+	The relation between the current vs distance agrees with the inverse square law prediction.
        }%
 }\\
 \\
-As observed in previous trials, the equipment malfunctioned multiple times (see Appendix~\ref{appendix:prevexp}).  
-
-To account for filtering issues, multiple filters were used (see Appendix~\ref{appendix:filters}).  
-
-Anomalies in voltage readings, especially with the blue filter, were noted (see Appendix~\ref{appendix:bluefilter}).
 
 \noindent\rule{\linewidth}{0.4pt}
-\vspace{2cm}
-
+\vspace{6.6cm}
+\pagebreak
 
 \appendix
 \section{Equipment Faulty on Multiple Occasions} \label{appendix:prevexp}
@@ -222,17 +213,26 @@ The values obtained with the addition of the blue filter appear incorrect. Witho
 
 
 
+\begin{thebibliography}{9}
+
+\bibitem{erroranalysis}
+ Preston, Daryl W. and Dietz, Eric R., \emph{The Art of Experimental Physics}. Available at: \url{http://ilide.info-daryl-w-preston-eric-r-dietz-the-art-of-experimental-physics-wiley}
+
+\bibitem{wiki_photoelectric}
+Wikipedia contributors, \emph{Photoelectric effect}, 2025. Available at: \url{https://en.wikipedia.org/wiki/Photoelectric_effect}
+
+\bibitem{github_code}
+LAUGHINGCATMEME, \emph{PH2233 - Code Repository}, 2025. Available at: \url{https://github.com/LAUGHINGCATMEME/PH2233}
+
+\bibitem{ses_apparatus}
+Ses Instruments, \emph{Planck's Constant Experiment (PC-101)}, 2025. Available at: \url{https://www.sesinstruments.in/planck-s-constant-experiment-pc-101-5141096.html}
+
+\bibitem{fsu_manual}
+FSU HEP Group, \emph{Photoelectric Effect Experiment Manual}, 2025. Available at: \url{http://www.hep.fsu.edu/~wahl/phy4822/expinfo/photel/SVSPhotel.pdf}
+
+\end{thebibliography}
 
 
-... as discussed in \cite{PrestonDietzErrorAnalysis}.
-\cite{PrestonDietzErrorAnalysis}
-Referencing the photoelectric effect \cite{wiki_photoelectric}. The code for the experiment can be found in the repository \cite{github_code}. The apparatus used is described in \cite{ses_apparatus}, and the detailed manual is available in \cite{fsu_manual}.
-
-
-
-
-\bibliographystyle{unsrt}
-\bibliography{aipsamp}
 
 
 \end{document}
