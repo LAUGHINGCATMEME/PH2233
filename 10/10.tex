@@ -22,7 +22,7 @@
   \]
   where the grating spacing was obtained from the given number of lines, wavelengths were measured and compared with accepted values. In the hydrogen spectrum the Balmer series was used to determine the Rydberg constant by plotting \(\frac{1}{\lambda}\) versus \(\left(\frac{1}{4} - \frac{1}{n^2}\right)\) (with \(n=3,4,5,\ldots\)) and obtaining the slope. A discussion of experimental uncertainty and a comparison with the accepted value \(R = \SI{1.097e7}{m^{-1}}\) is included.
 \end{abstract}
-
+\vspace{2cm}
 \section{Introduction and Theory}
 Hydrogen atoms emit a series of spectral lines when excited. The visible lines (the Balmer series) are given by the empirical formula
 \[
@@ -95,7 +95,7 @@ with \(\theta_0 = \ang{264}\). The effective angles and computed wavelengths for
   \caption{Hydrogen Lamp Angular Readings and Computed Wavelengths.}
   \begin{tabular}{lcccc}
     \toprule
-    Color   & Clockwise Reading & Anticlockwise Reading & Effective Angle \(\theta_{\mathrm{eff}}\) (average) & Computed \(\lambda\) (nm) \\
+    Color   & Clockwise Reading & A-Clockwise Reading & Effective Angle \(\theta_{\mathrm{eff}}\) (avg) & Computed \(\lambda\) (nm) \\
     \midrule
     Red     & \(\ang{282;24}\) & \(\ang{244;23}\) & \(\ang{19.01}\) & 551.53 \\
     Yellow  & \(\ang{280;56}\) & \(\ang{246;27}\) & \(\ang{17.24}\) & 501.91 \\
@@ -145,6 +145,11 @@ where \(n_f = 3,\,4,\,5,\dots\). By plotting \(\frac{1}{\lambda}\) versus \(\lef
   \label{tab:rydberg_data}
 \end{table}
 
+Plotting the linear regression and doing a linear fit, we get: \\
+\includegraphics{Figure_1}
+
+
+
 The linear regression slope gives \(R_{\text{exp}} = \SI{1.157e7}{m^{-1}}\), with a percent difference of 5.51\% from the accepted value \(R = \SI{1.097e7}{m^{-1}}\).
 
 \subsection{Wavelength Comparison for Hydrogen}
@@ -164,11 +169,10 @@ The linear regression slope gives \(R_{\text{exp}} = \SI{1.157e7}{m^{-1}}\), wit
   \label{tab:comparison}
 \end{table}
 
-\section{Discussion and Conclusion}
+\section{Result and Conclusion}
 The experimental procedure allowed for the measurement of spectral lines from both the mercury and hydrogen lamps. In the mercury lamp, discrepancies in computed wavelengths (e.g., 345.32\,nm vs. accepted 436\,nm) indicate potential calibration errors. For hydrogen, the Rydberg constant was determined as \(R_{\text{exp}} = \SI{1.157e7}{m^{-1}}\) with a 5.51\% deviation from the accepted value. The wavelength comparison table shows good agreement for higher \(n_f\) transitions, suggesting reduced experimental uncertainty for smaller diffraction angles.
 
-\section*{References}
-\section*{References}
+\vspace{6cm}
 \begin{thebibliography}{9}
 \bibitem{erroranalysis}
 Preston, Daryl W. and Dietz, Eric R. (2025). \textit{The Art of Experimental Physics}. Available online: \url{http://ilide.info-daryl-w-preston-eric-r-dietz-the-art-of-experimental-physics-wiley}.
@@ -182,4 +186,6 @@ LAUGHINGCATMEME (2025). \textit{PH2233 - Code Repository}. GitHub repository: \u
 \bibitem{manual}
 \textit{Brewster's Angle Manual} (2025). \url{cdn.pasco.com/product_document/Brewsters-Angle-Accessory-Manual-OS-8170A.pdf}.
 \end{thebibliography}
+
+
 \end{document}

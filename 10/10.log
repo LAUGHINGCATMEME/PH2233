@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.30)  12 APR 2025 01:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.30)  12 APR 2025 03:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,14 +380,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+[2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Overfull \hbox (34.65407pt too wide) in paragraph at lines 69--81
  [][] 
  []
 
 
-
-[2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (104.64664pt too wide) in paragraph at lines 96--107
+Overfull \hbox (77.23026pt too wide) in paragraph at lines 96--107
  [][] 
  []
 
@@ -400,10 +400,18 @@ Overfull \hbox (16.56262pt too wide) in paragraph at lines 110--110
 
 
 [3]
+<Figure_1.png, id=26, 433.62pt x 289.08pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 149.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
 
 [4]
+
+[5 <./Figure_1.png>]
 ! Undefined control sequence.
-l.174 ...rimental Physics}. Available online: \url
+l.178 ...rimental Physics}. Available online: \url
                                                   {http://ilide.info-daryl-w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -412,13 +420,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 2253) in paragraph at lines 174--175
+Underfull \hbox (badness 2253) in paragraph at lines 178--179
 []\OT1/cmr/m/n/12 Preston, Daryl W. and Di-etz, Eric R. (2025). \OT1/cmr/m/it/1
 2 The Art of Ex-per-i-men-tal
  []
 
 ! Undefined control sequence.
-l.177 ...s (2025). \textit{Rydberg Constant}. \url
+l.181 ...s (2025). \textit{Rydberg Constant}. \url
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -429,13 +437,13 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.177 ...rl{https://en.wikipedia.org/wiki/Rydberg_
+l.181 ...rl{https://en.wikipedia.org/wiki/Rydberg_
                                                   constant}.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.177 ...//en.wikipedia.org/wiki/Rydberg_constant}
+l.181 ...//en.wikipedia.org/wiki/Rydberg_constant}
                                                   .
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -446,7 +454,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.178 
+l.182 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -454,7 +462,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.178 
+l.182 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -463,13 +471,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 []\OT1/cmr/m/n/12 Wikipedia con-trib-u-tors (2025). \OT1/cmr/m/it/12 Ry-d-berg 
 Con-stant\OT1/cmr/m/n/12 .
  []
 
 ! Undefined control sequence.
-l.180 ...Code Repository}. GitHub repository: \url
+l.184 ...Code Repository}. GitHub repository: \url
                                                   {https://github.com/LAUGHI...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -478,7 +486,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.183 ...tit{Brewster's Angle Manual} (2025). \url
+l.187 ...tit{Brewster's Angle Manual} (2025). \url
                                                   {cdn.pasco.com/product_doc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -489,13 +497,13 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.183 ...nual} (2025). \url{cdn.pasco.com/product_
+l.187 ...nual} (2025). \url{cdn.pasco.com/product_
                                                   document/Brewsters-Angle-A...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.183 ...ters-Angle-Accessory-Manual-OS-8170A.pdf}
+l.187 ...ters-Angle-Accessory-Manual-OS-8170A.pdf}
                                                   .
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -510,7 +518,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 \end{thebibliography}
+l.188 \end{thebibliography}
                            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -518,7 +526,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.184 \end{thebibliography}
+l.188 \end{thebibliography}
                            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -526,7 +534,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.184 \end{thebibliography}
+l.188 \end{thebibliography}
                            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -536,21 +544,17 @@ my insertion and my current dilemma will both disappear.
 
 
 
-[5] (./10.aux)
+[6] (./10.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 9179 strings out of 475171
- 204256 string characters out of 5767095
- 571094 words of memory out of 5000000
- 32111 multiletter control sequences out of 15000+600000
+ 9190 strings out of 475171
+ 204452 string characters out of 5767095
+ 570106 words of memory out of 5000000
+ 32122 multiletter control sequences out of 15000+600000
  570140 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  73i,11n,80p,603b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -568,10 +572,10 @@ s/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
 pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.
 pfb>
-Output written on ./10.pdf (5 pages, 200106 bytes).
+Output written on ./10.pdf (6 pages, 221070 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
