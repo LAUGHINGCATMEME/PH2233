@@ -1,9 +1,28 @@
 \documentclass[%
+ reprint,
  sor,
  jor,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
  amsmath,amssymb,
- reprint,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
 ]{revtex4-2}
+
+
 \usepackage{ulem}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -13,8 +32,6 @@
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{placeins}
 \usepackage{float}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.17}
 
 
 
@@ -88,7 +105,6 @@ Note that if the two thermometers do not initially show the same reading, the te
 \begin{itemize}
 	\item Use thermal gloves while working with the instrument.
 	\item Make sure all the contacts are proper.
-	\item 
 \end{itemize}
 
 
@@ -98,24 +114,23 @@ Note that if the two thermometers do not initially show the same reading, the te
 Least count of thermometer:  \uline{ 0.5 $\si{\celsius}$ }\\
 Least count of vernier calliper:  \uline{$10^{-4}$ m } \\
 Least count of screw gauge:  \uline{$10^{-5}$ m } \\
-
-\noindent $T'=0$\\
-\noindent$M_{D_1} = $ 905 g
-
+\noindent $T'=$  \uline{$0~\si{\celsius}$}\\
+\noindent$M_{D_1} = $ \uline{905 g}\\
+\noindent $T_a =$ \uline{$23~\si{\celsius}$}
 
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|}
     \hline
-    Material & Diameter $(10^{-5} \si{\meter})$  & Length (cm) \\
+    Material & Width (d) $(10^{-5} \si{\meter})$  & Diameter (l) (cm) \\
     \hline
     Glass	& 410-376-376-376-376 & 11.80\\
-    Ebonite 	& 203-119-197-201-199 & 11.20-11.30\\
+    Ebonite 	& 203-199-197-201-199 & 11.20-11.30\\
     Rubber 	& 331 & 9.88-10.00\\
     \hline
 \end{tabular}
-\caption{Data taken on 19 Mar 2025, the different observations are seperated by '-'.}
+\caption{Data taken on 19 Mar 2025, the different observations are separated by '-'.}
 
 \end{table}
 
@@ -131,7 +146,7 @@ Least count of screw gauge:  \uline{$10^{-5}$ m } \\
     Rubber 	& 84.0& 95.0 \\
     \hline
 \end{tabular}
-\caption{Data taken on 19 Mar 2025, the different observations are seperated by '-'.}
+\caption{Data taken on 19 Mar 2025.}
 \end{table}
 \begin{table}[H]
 \label{tab:}
@@ -157,196 +172,76 @@ Least count of screw gauge:  \uline{$10^{-5}$ m } \\
 	  77.5 & 22 \\
 	  \hline
   \end{tabular}
-  \caption{Data taken on 21 Mar 2025, the rate of cooling for $D_2$ where $T$ is the mean of floor and celing of the one degree temperature range.}
+  \caption{Data taken on 21 Mar 2025, the rate of cooling for $D_2$ where $T$ is the mean of floor and ceiling of the one degree temperature range.}
 \end{table}
+
 
 \section{Uncertainties and Error Sources}
 \subsection{Measurement Uncertainties}
 \begin{itemize}
-	\item \textbf{Weight Measurements:}
-    \item \textbf{Length Measurements:} 
-    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.05$ \si{\kelvin} due to instrument resolution.
-\end{itemize}
-\subsection{Random Errors}
-\begin{itemize}
-	\item STUFF
+	\item \textbf{Weight Measurements:} All weight measurements have an uncertainty of 0.5 g.
+	\item \textbf{Length Measurements:} Vernier caliper has an uncertainty of $5\times 10^{-5}$m while screw gauge measurements having uncertainty of $5\times 10^{-6}$m.
+    \item \textbf{Temperature Measurements:} Uncertainty of $\pm 0.25$ \si{\kelvin} due to instrument resolution.
 \end{itemize}
 
 \subsection{Systematic Errors}
 \begin{itemize}
-	\item STUFF
+	\item Improper thermal contact between disk and thermometer. 
+	\item Incomplete contacts between disks.
+	\item Non ideal insulating material for calculate the rate of cooling of $D_2$
 \end{itemize}
 
 
 
 \section{Calculation and Error Analysis}
 \subsection{Error Propagation}
-Using Equation-1 we get: k = ms l A T ˙T2 -T1 From the length, temperature and mass uncertainty, the error to k will travel using the formula for error propagation as: ENTER A BOOK ERROR PROPER HERE 
-\subsection{Calculation}
-We calculate the value of $\alpha$ of all data points and their uncertainity from hte above formul,  we get (Refer to [3] for calculations):
+Using Equation-1 we get:
+$$k=\frac{4ms\dot{T}}{\pi d^2 l(T_2-T_1)}$$
+From the length, temperature and mass uncertainty, the error to $k$ will travel using the formula for error propagation as \cite{erroranalysis}: 
 
-\begin{table}[h]
+\begin{widetext}
+	\begin{equation}
+\delta k = k\sqrt{
+	\left( \frac{\delta m}{ m}\right)^2 + 
+	\left( \frac{\delta \dot{T}}{ \dot{T}}\right)^2 + 
+	\left( \frac{2\delta d}{ d}\right)^2 + 
+	\left( \frac{\delta l}{ l}\right)^2 + 
+	\left( \frac{\sqrt 2\delta T}{ T_1 - T_2}\right)^2 
+}
+\end{equation}
+\end{widetext}
+
+\subsection{Calculation}
+We calculate the value of $k$ of all data points and their uncertainty from the above formula,  we get (Refer to [3] for calculations):
+
+\begin{table}[H]
 \centering
 \begin{tabular}{ccc}
 \hline
-Material & $\alpha$ (\si{1/\degreeCelsius}) \\
+Material & $k$ (\si{\watt\square\per\meter\per\kelvin}) \\
 \hline
-Aluminium & $(2.33 \pm 0.02) \times 10^{-5}$ \\
-Aluminium & $(2.32\pm 0.02) \times 10^{-5}$ \\
-Brass & $(1.90\pm 0.02) \times 10^{-5}$ \\
-Brass & $(1.88\pm 0.02) \times 10^{-5}$ \\
-Brass & $(1.92\pm 0.02 \times 10^{-5}$ \\
-Copper & $(1.67\pm 0.02) \times 10^{-5}$ \\
-Copper & $(1.68\pm 0.02) \times 10^{-5}$ \\
-Steel & $(1.61\pm 0.02) \times 10^{-5}$ \\
-Steel & $(1.71\pm 0.02) \times 10^{-5}$ \\
-Steel & $(1.68\pm 0.02) \times 10^{-5}$ \\
-
+Glass& $(50.4 \pm 0.3)$ \\
+Ebonite & $(42.7\pm 0.2) $ \\
+Rubber& $(64.4\pm 0.4) $ \\
 \hline
-
-
 \end{tabular}
-\caption{Calculated expansion coefficients}
+\caption{Calculated heat transfer coefficients}
 \end{table}
 
 \section{Result}
-	    The final expansion values by weighted average$^{[1]}$ are:\\
-\begin{table}[h]
+	    The final heat transfer coefficient values $^{[1]}$\\
+\begin{table}[H]
 \centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{ccc}
 \hline
-\textbf{Material} & \textbf{$\alpha$ (1/\textdegree C)} & \textbf{Uncertainty (1/\textdegree C)} & \(\chi^2_\nu\) \\
+Material & $k$ (\si{\watt\square\per\meter\per\kelvin}) \\
 \hline
-Aluminium & \(2.328\times10^{-5}\) & \(6.1\times10^{-8}\) & 0.15 \\
-Brass     & \(1.90\times10^{-5}\) & \(1.73\times10^{-7}\) & 2.70 \\
-Copper    & \(1.674\times10^{-5}\) & \(3.60\times10^{-8}\) & 0.10 \\
-Steel     & \(1.67\times10^{-5}\) & \(3.07\times10^{-7}\) & 11.14 \\
+Glass& $(50.4 \pm 0.3)$ \\
+Ebonite & $(42.7\pm 0.2) $ \\
+Rubber& $(64.4\pm 0.4) $ \\
 \hline
 \end{tabular}
 \end{table}
-
-
-
-
-
-\begin{tikzpicture}
-  % Set up the axis with custom dimensions, white background,
-  % and y-axis starting at 7 for better visibility of error bars.
-  \begin{axis}[
-      width=12cm,
-      height=10cm,              % Increased height for clear error bar visibility
-      xlabel={Material},
-      ylabel={Linear Expansion Coefficient ($\times 10^{-6} \alpha$)},
-      xtick={1,2,3,4},
-      xticklabels={Aluminium, Brass, Copper, Steel},
-      ymin=7, ymax=26,          % y-axis range from 7 to 26
-      ymajorgrids=true,
-      axis background/.style={fill=white}, % Set the background to white instead of pink
-      legend style={at={(0.5,-0.15)},anchor=north,legend columns=2},
-  ]
-
-  % Add legend entries:
-  % - Theoretical range (displayed as a colored rectangle)
-  % - Observed value with error bars (red dot with black error bars)
-  \addlegendimage{area legend, fill=gray!30, draw=black}
-  \addlegendentry{Theoretical range}
-  \addlegendimage{only marks, mark=*, mark options={red}}
-  \addlegendentry{Observed values}
-
-  %-------------------------------
-  % Plot theoretical ranges as colored rectangles
-  % Each rectangle represents the range for the material.
-  % The width of 0.6 units (from x-0.3 to x+0.3) centers the rectangle at the xtick.
-  
-  % Aluminium: theoretical range [21, 24]
-  \addplot [draw=black, fill=blue!30] coordinates {
-    (1-0.3,21) % Bottom left corner
-    (1+0.3,21) % Bottom right corner
-    (1+0.3,24) % Top right corner
-    (1-0.3,24) % Top left corner
-  } \closedcycle; % Close the cycle to form a rectangle
-
-  % Brass: theoretical range [18, 19]
-  \addplot [draw=black, fill=green!30] coordinates {
-    (2-0.3,18)
-    (2+0.3,18)
-    (2+0.3,19)
-    (2-0.3,19)
-  } \closedcycle;
-
-  % Copper: theoretical range [16, 16.7]
-  \addplot [draw=black, fill=orange!30] coordinates {
-    (3-0.3,16)
-    (3+0.3,16)
-    (3+0.3,16.7)
-    (3-0.3,16.7)
-  } \closedcycle;
-
-  % Steel: theoretical range [9.9, 17.3]
-  \addplot [draw=black, fill=purple!30] coordinates {
-    (4-0.3,9.9)
-    (4+0.3,9.9)
-    (4+0.3,17.3)
-    (4-0.3,17.3)
-  } \closedcycle;
-
-  %-------------------------------
-  % Plot observed values with error bars:
-  % The observed values are marked with red dots.
-  % The error bars are drawn with a solid, dark black line and the caps are filled black.
-  \addplot+[
-      only marks,
-      mark=*,
-      mark options={red}, % Red dot for the observed value
-      error bars/.cd,
-      y dir=both,        % Error bars in both upward and downward directions
-      y explicit,        % Use the explicit error value provided
-      error bar style={color=black, line width=1pt, solid}, % Solid, dark black error bars
- %     error mark options={draw=black, fill=black, solid} % Filled black error bar caps
-  ] coordinates {
-      (1,23.28) +- (0,0.06) % Aluminium observed value with ±0.2 error
-  };
-
-  \addplot+[
-      only marks,
-      mark=*,
-      mark options={red},
-      error bars/.cd,
-      y dir=both,
-      y explicit,
-      error bar style={color=black, line width=1pt, solid},
-  ] coordinates {
-      (2,19.0) +- (0,0.17) % Brass observed value with ±0.2 error
-  };
-
-  \addplot+[
-      only marks,
-      mark=*,
-      mark options={red},
-      error bars/.cd,
-      y dir=both,
-      y explicit,
-      error bar style={color=black, line width=1pt, solid},
-  ] coordinates {
-      (3,16.74) +- (0,0.04) % Copper observed value with ±0.2 error
-  };
-
-  \addplot+[
-      only marks,
-      mark=*,
-      mark options={red},
-      error bars/.cd,
-      y dir=both,
-      y explicit,
-      error bar style={color=black, line width=1pt, solid},
-  ] coordinates {
-      (4,16.7) +- (0,0.3) % Steel observed value with ±0.2 error
-  };
-
-  \end{axis}
-\end{tikzpicture}
-
 
 
 
@@ -359,23 +254,11 @@ Steel     & \(1.67\times10^{-5}\) & \(3.07\times10^{-7}\) & 11.14 \\
 
 
 \noindent\rule{\linewidth}{0.4pt}
+\vspace{3cm}
 
-\newpage
 \appendix
 \section{Theoretical Values}
-The expected values of $\alpha$ in \si{\per\celsius} are [4]:
-\[
-\begin{split}
-\alpha_{\text{Steel}} &= (0.99 - 1.73) \times 10^{-5}\\
-\alpha_{\text{Brass}} &= (1.8-1.9) \times 10^{-5}\\
-\alpha_{\text{Aluminium}} &= (2.1 - 2.4) \times 10^{-5}\\
-\alpha_{\text{Copper}} &= (1.6 - 1.67) \times 10^{-5}
-\end{split}
-\]
-
-\section{Temperature of rod}\label{rodtemp}
-The temperature of rod measured with the application of thermal paste is found to be ranging between $98~\si{\celsius}-99~\si{\celsius}$ (measured on 19 Mar 2025)
-
+The theoretical values of $k$ are highly different from the ones found, the source of this errors are described in systematic errors.
 
 
 

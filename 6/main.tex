@@ -1,5 +1,5 @@
 \documentclass[%
- sor,
+sor,
 %aip,
 %twoside,
 %groupedaddress,
@@ -11,7 +11,7 @@
 %author-year,%
 %author-numerical,%
 ]{revtex4-2}
-
+\usepackage{ulem}
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
 \usepackage{circuitikz}
@@ -25,167 +25,529 @@
 \usepackage{array}
 \usepackage{siunitx}
 \usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage{array,booktabs,multirow}
+
+% Define a custom strut to enforce row height of 0.69 cm
+\newcommand{\mystrut}{\rule{0pt}{0.69cm}}
 
 \begin{document}
 
 \preprint{IDK what this does}
 
-\title{Experiment 7\\Millikan's Oil Drop}
+\title{Experiment 6\\Millikan's Oil Drop}
 
 \author{Aumshree P. Shah\\20231059\color{red}}
 \altaffiliation[\color{red}]{aumshree.pinkalbenshah@students.iiserpune.ac.in}
-\date{\today}
+\date{$\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$}
 \vspace{1cm}
 \begin{abstract}
 \centering
-In this experiment, we attempt to measure Planck's constant and test the validity of the inverse square law.
+In this experiment we measure the charge of an electron using Millikan's oil drop method.
 \end{abstract}
 \maketitle
-\section{Theory and Procedure}
-\subsection{Theory}
-It was observed as early as 1905 \textbf{ENTER A REFERENCE HERE} that most metals under influence of radiation, emit electrons. This phenomenon was termed as photoelectric emission. The detailed study of it has shown:
+\section{Theory}
+
+Consider a spherical oil droplet of radius $r$ and density $\rho$ falling under the gravitational force. This droplet in air is acted upon by a constant force and soon reaches a terminal velocity given by Stokes' law,
+$    F_n = 6 \pi \eta r v_f$, 
+where $\eta$ is the coefficient of viscosity of air and $v_f$ is the terminal velocity during the fall. The gravitational and buoyancy forces acting on the droplet are balanced by $F_n$:
+\begin{equation}
+    \frac{4}{3} \pi r^3 \rho g - \frac{4}{3} \pi r^3 \rho_a g = 6 \pi \eta r v_f.
+\end{equation}
+Here, $\rho_a$ is the density of air. The falling velocity $v_f$ is thus given by
+\begin{equation}
+    v_f = \frac{2}{9} \frac{g r^2}{\eta} (\rho - \rho_a).
+\end{equation}
+
+If the droplet carries a charge $ne$ and is moving upward with terminal velocity $v$, under the influence of the applied electric field $V/d$ between the parallel plate electrodes separated by the distance $d$ and potential difference $V$, the force balance equation is:
+\begin{equation}
+    \frac{4}{3} \pi r^3 (\rho - \rho_a) g + 6 \pi \eta r v = \frac{Vne}{d}.
+\end{equation}
+
+Subtracting Eq.~(2) from Eq.~(4) and solving for $ne$, we get
+\begin{equation}
+    ne = \frac{6 \pi \eta r d}{V} (v_f + v).
+\end{equation}
+Dividing Eq.~(4) by Eq.~(3), gives
+\begin{equation}
+    ne = \frac{4 \pi}{3} \frac{g d}{V} (\rho - \rho_a) r^3 \left( 1 + \frac{v}{v_f} \right).
+\end{equation}
+
+The Stokes' law used in obtaining Eqs.~(1)--(5) assumes that the droplets are moving slowly, that there is no slipping of the medium over the surface of the droplet, that the medium is of quite large extent compared to the size of the droplet, and that the inhomogeneities in the medium are of a size small compared to the size of the droplets. In the present case, all the assumptions except the last one are reasonably valid. The radii of the droplets are of the order of one micron and therefore not much greater than the mean free path of the air molecules. The droplets will tend to fall more quickly in the free space between the air molecules. The expression for the falling velocity $v_f$, corrected for this effect, on the basis of kinetic theory is
+\begin{equation}
+    v_f = \frac{2}{9} \frac{g r^2}{\eta} (\rho - \rho_a) \left( 1 + \frac{c}{P r} \right),
+\end{equation}
+where $c = 6.17 \times 10^{-8}$ m of Hg$\cdot$m is a correction factor and $P$ (in m of Hg) is the atmospheric pressure. Writing
+\begin{equation}
+    \xi = \frac{9 \eta}{2 g} \frac{v_f}{(\rho - \rho_a)}
+\end{equation}
+\begin{equation}
+    \zeta = \frac{c}{2 P},
+\end{equation}
+Eq.~(6) now reduces to
+\begin{equation}
+    r^2 + 2 \zeta r - \xi = 0.
+\end{equation}
+The radius of the droplet is given by the positive root of this equation
+\begin{equation}
+    r = -\zeta + \sqrt{\zeta^2 + \xi}.
+\end{equation}
+
+The charge $ne$ may be obtained by first calculating $\xi$ and $\zeta$ from Eqs.~(7) and (8), then calculating the radius $r$ from Eq.~(10) and finally $ne$ from Eq.~(5).
+
+Equation (5) above is for the 'Dynamic' method. In the 'Balancing' method, the droplet is kept stationary by adjusting the potential. The upward velocity is thus equal to zero. The final equation for $ne$ in the 'Balancing' method is therefore
+\begin{equation}
+    ne = \frac{4 \pi}{3} \frac{g d}{V_b} (\rho - \rho_a) r^3,
+\end{equation}
+where $V_b$ is the balancing potential.
+
+
+
+\section{Procedure}
 \begin{enumerate}
-  \item That the emission process depends strongly on frequency of radiation.
-  \item For each metal there exists a critical frequency such that light of lower frequency is unable to liberate member of electrons is strictly proportional to the intensity of this radiation.
-  \item The emission of electron occurs within a very short time interval after arrival of the radiation and member of electrons is strictly proportional to the intensity of this radiation. 
+	\item Read the user manual [4]. 
+    \item Note the atmospheric pressure and the room temperature.
+    \item Switch on the power supply.
+    \item Adjust the leveling screws in the base of the panel and check the level indicator at the top.
+    \item Wait for about ten minutes.
+    \item Fix two horizontal lines on the monitor. These are the preset lines. The rise and fall times of the droplets to move from one line to the other are to be recorded. A good choice is to choose the second line from the top and the last but one line from the bottom. This will leave some room at the {top} and at the {bottom} for maneuvering and preventing the droplet from getting lost.
+    \item Press the ‘clear key’ to make the ‘time meter’ read zero.
+    \item Spray droplets of oil from the atomizer. One or two squirts are usually sufficient.
+    \item As the droplets drift down, some of them pass through the hole in the upper parallel plate and reach the region in-between the plates where they are illuminated.
+    \item These are viewed by the microscope/camera as unresolved points of diffracted light and the images are transmitted to the monitor screen.
+    \item These droplets drift down slowly under gravitational force.
+    \item {Under the influence of the electric field} between the plates, the motion of the droplets will get affected if they are charged. If a droplet moves downward more slowly under the influence of the electric force (corresponding to the upper plate at a positive potential), the drop is negatively charged. Its motion can be arrested or even reversed (made to rise) by an increase in the potential. If the downward drifting of the droplet increases under the action of electric force, the droplet is positively charged. Such droplets are ignored in the present set-up.
+    \item Suitable negatively charged droplet is selected. ‘Suitable’ means that it drifts downward slowly (about 10 – 15 s free-fall time) under gravitational field indicating that the droplet is not too heavy. Its mass should also not be too small, otherwise it will bounce around due to random collisions with air molecules, \textit{Brownian motion}, and it will be difficult to estimate when the droplet actually crosses a line. A very small droplet may cross a line 10–20 times. It should also be possible to make it rise by applying a voltage of about 500 V indicating that there are only a few charge quanta on the droplet. Fix some value of the voltage.
+    \item This selection is done by concentrating on one or two droplets and removing all others from the field by switching on and switching off the electric field.
+    \item Once a droplet has been chosen, measurements can begin. There are two approaches:
+    \begin{enumerate}
+        \item {Dynamic:} Measure the free-fall time with the voltage off and the rise time with some suitable voltage on for the droplet to move between the two above chosen lines on the monitor. For these measurements, follow the procedure below:
+        \begin{enumerate}
+            \item Pull the droplet above the top chosen line on the monitor by adjusting the voltage.
+            \item Press the ‘clear key’ to make the ‘time meter’ read zero.
+            \item Switch off the voltage, the droplet will begin to fall freely.
+            \item Start the ‘time meter’ by pressing the ‘start/stop’ key when the droplet crosses the top chosen line on the monitor.
+            \item Stop the ‘time meter’ by pressing the ‘start/stop’ key again when the droplet crosses the bottom chosen line on the monitor.
+            \item Stop the downward motion of the droplet by switching on the voltage.
+            \item Note the fall time from the ‘time meter.’
+            \item Press the ‘clear key’ to make the ‘time meter’ read zero.
+            \item Allow the droplet to come below the bottom line by switching off the voltage.
+            \item Switch on the voltage (its value already fixed earlier), the droplet will begin to rise.
+            \item Start the ‘time meter’ when the droplet crosses the chosen bottom line on the monitor.
+            \item Stop the ‘time meter’ when the droplet crosses the top chosen line on the monitor.
+            \item Stop the upward motion of the droplet by switching off the voltage.
+            \item Note the rise time and the voltage.
+        \end{enumerate}
+        Repeat these measurements of free-fall time and rise time several times. Take the {average} of these timings for the free-fall and the rise and note the voltage (kept fixed). Take another suitable droplet if it is there. If not, spray droplets again. Choose a suitable one and proceed as above to get data on several droplets.
+        
+        \item {Balancing:} Measure the free-fall time as in the above ‘Dynamic method’ for the droplet to move between the two chosen lines on the monitor. Apply the voltage and adjust its value such that the electric force on the droplet just balances other forces on it and the droplet hangs (does not move up or down). The droplet should remain stationary for several minutes. The voltage may have to be adjusted again and again.
+    \end{enumerate}
+    Take the {average value} of these voltages and the {average of the free-fall timings.} Take another suitable droplet if it is there. If not, spray droplets again. Choose a suitable one and proceed as above to get on several droplets.
+    \item Note the atmospheric pressure and the room temperature at the end of the experiment as well.
 \end{enumerate}
-The experimental facts given above are among the strongest evidence that the electromagnetic field is quantified and the field consists of quanta of energy $E = h \nu$ where $\nu$ is the frequency of the radiation and $h$ is the Planck’s constant. These quanta are called photons. \\
-
-Further it is assumed that electrons are bound inside the metal surface with an energy $e\phi$, where $\phi$ is called work function. It then follows that if the frequency of the light is such that $h\nu > e \phi$ it will be possible to eject photoelectron, while if $h\nu < e \phi$, it would be impossible. In the former case, the excess energy of quantum appears as kinetic energy of the electron, so that \begin{equation}h\nu = \frac 1 2 mv^2 + e\phi \end{equation} which is the famous photoelectrons equation formulated by Einstein in 1905. The energy of emitted photoelectrons can be measured by simple retarding potential techniques as is done in this experiment.
-Retarding potential at which the photocurrent stopped, we call it stopping potential ($V_s$) and it's used to measure the kinetic energy of photoelectrons ($E_e$), we have: 
-\begin{equation}E_e = \frac 1 2 mv^2 = eV_s \,\,\,\,\,\,\,\,\,\,\,\,\,\,  \text{or} \,\,\,\,\,\,\,\,\,\,\,\,\,\, V_s = \frac h e \nu-\phi \end{equation}
-So when we plot the graph of $V_s$ as a function of $\nu$, the slope has a value of $\frac h e $ and it intercepts on x-axis at $V_s = 0$ and the $\nu$ at the intercept with the slope of the graph gives the work function $\phi$.
-
-
-\subsection{Procedure}
-removed stryofom APpensix
-
- shall make use of multiple filters, refer to appendix A
-
-PRecautions: 
-CLeaned lenses, 
-not all lences work
-the experiment doesnt work erc
-WHY THE FUCK IT IS GIVING NEGATIVE CURRECT
-\begin{enumerate}
-  \item Read the user manual of the setup \textbf{ENTER A model manual HERE}
-  \item 
-\end{enumerate}
-
-\subsection{Precautions}
-\begin{itemize}
-  \item Ensure there is no obstruction between the source and the photo-tube \textbf{ENTER A appenex of prev what happened HERE}
-  \item clean al filters
-  \item take multiple take multiple filters if they dont work as expected \textbf{ENTER A why HERE}
-  \item check weather the filters work
-  \item make sure the values are making sence \textbf{ENTER A why HERE}
-\end{itemize}
-
-
 
 
 \section{Observations}
+\begin{enumerate}
+  \item Distance $d$ between the plates = 
+  \item Distance $L$ between the chosen top and bottom lines of the monitor = \uline{$ $}
+\end{enumerate}
 
+\subsection{Dynamic Method}
 
-\begin{table}[ht]
+\begin{table}[H]
 \centering
-    \begin{minipage}[b]{0.48\hsize}\centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|
+>{\centering\arraybackslash}m{1cm}|
+>{\centering\arraybackslash}m{1cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|}
 \hline
-\textbf{Filter Wavelength (nm)} & \textbf{Voltage (V)} \\
-\hline
-635 & 		\\
-585 &          \\  
-540 &          \\
-500 &          \\
-460 &          \\
 
+% ---------- HEADER ROW ----------
+\mystrut \textbf{Drop No.} &
+\mystrut \textbf{S. No. } &
+\mystrut \textbf{Free-fall Time (s)} &
+\mystrut \textbf{Rise Time (s)} &
+\mystrut \textbf{Mean Free-fall Time ($t_f$) (s)} &
+\mystrut \textbf{Mean Rise Time ($t_r$ (s)} &
+\mystrut \textbf{Mean Free-fall Velocity ($V_f = L/t_f$) m/s} &
+\mystrut \textbf{Voltage (V)} \\
 \hline
-\end{tabular}
-\caption{Stopppnig voltage at blag length and stuff}
-\label{tab:table1}
-    \end{minipage}
-\hfill\vline\hfill
-    \begin{minipage}[b]{0.48\hsize}\centering
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Filter Wavelength (nm)} & \textbf{Voltage (V)} \\
-\hline
-635 & 		\\
-585 &          \\  
-540 &          \\
-500 &          \\
-460 &          \\
 
+% ========== SET 0 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{1}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
 \hline
+
+% ========== SET 1 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{2}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\hline
+
+% ========== SET 2 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{3}} &
+\mystrut  &
+\mystrut  &
+\mystrut  &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\hline
+% ========== SET 3 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{4}} &
+\mystrut  &
+\mystrut  &
+\mystrut  &
+\multirow{5}{*}{\mystrut  } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut  & & & & \\
+\hline
+% ========== SET 1 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{5}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } &
+\multirow{5}{*}{\mystrut } \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut  & \mystrut & & & & \\
+\cline{2-4}
+& \mystrut  & \mystrut & \mystrut  & & & & \\
+\hline
+
 \end{tabular}
-\caption{Data for inverse square law}
-\label{tab:table2}
-   \end{minipage}
+\caption{Data from Dynamic Method}
+\label{tab:example}
+\end{table}
+\subsection{Balancing Method}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\centering\arraybackslash}m{1cm}|
+>{\centering\arraybackslash}m{1cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{3cm}|
+>{\centering\arraybackslash}m{2cm}|
+>{\centering\arraybackslash}m{3cm}|}
+\hline
+
+% ---------- HEADER ROW ----------
+\mystrut \textbf{Drop No.} &
+\mystrut \textbf{S. No. } &
+\mystrut \textbf{Free-fall Time (s) } &
+\mystrut \textbf{Mean Free-fall Time ($t_f$) (s)} &
+\mystrut \textbf{Mean Free-fall Velocity ($V_f = L/t_f$) m/s} &
+\mystrut \textbf{Balancing Voltage (v)} &
+\mystrut \textbf{Final Balancing Voltage (V)} \\
+\hline
+
+% ========== SET 0 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{1}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\mystrut &
+\multirow{5}{*}{\mystrut } \\
+
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut  & \mystrut & &   \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\hline
+% ========== SET 1 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{2}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\mystrut &
+\multirow{5}{*}{\mystrut } \\
+
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut  & \mystrut & &   \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\hline
+
+
+% ========== SET 2 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{3}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\mystrut &
+\multirow{5}{*}{\mystrut } \\
+
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut  & \mystrut & &   \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\hline
+% ========== SET 3 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{4}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\mystrut &
+\multirow{5}{*}{\mystrut } \\
+
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut  & \mystrut & &   \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\hline
+
+
+
+% ========== SET 4 (5 rows) ==========
+\multirow{5}{*}{\mystrut \textbf{5}} &
+\mystrut &
+\mystrut &
+\mystrut &
+\multirow{5}{*}{\mystrut } &
+\mystrut &
+\multirow{5}{*}{\mystrut } \\
+
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut  & \mystrut & &   \mystrut & \\
+\cline{2-3}\cline{6-6}
+& \mystrut  & \mystrut & \mystrut  & &  \mystrut & \\
+\hline
+
+
+
+\end{tabular}
+\caption{Data from Balancing Method}
+\label{tab:example}
 \end{table}
 
 
 
+\begin{enumerate}
+	\setcounter{enumi}{2}
+  \item Density $\rho$ of the oil = 
+  \item Density $\rho_a$ of air = 
+  \item Room temperature $T$ = 
+  \item Atmospheric pressure $P$ = 
+  \item Coefficient of viscosity of air $\eta$ = 
+\end{enumerate}
 
 
-\section{Uncertainties and Sources of Error}
-\subsection{Uncertainties from precision of instrument}
-\begin{itemize}
-    \item Weight Measurements:
-    All weight values have an uncertainty of $\Delta m = \pm 0.05$ \si{\gram} due to instrument resolution.    
-    \item Temperature Measurements: Temperature values have an uncertainty of $\Delta T = \pm 0.005$ \si{\kelvin} due to instrument resolution. 
-\item Mercury Thermometer: The thermometer used to measure $T_s$ has an uncertainty of $\Delta T_m = \pm 0.5$ \si{\kelvin}
-\end{itemize}
+\section{Calculation}
+\subsection{Common constants}
+\begin{enumerate}
+  \item $C=4\pi dg(\rho-\rho_a)/3 = $
+  \item $D=9\eta /2g(\rho-\rho_a) = $
+  \item $\zeta = c/2P = $
+  \item $c = $
+\end{enumerate}
+\subsection{Calculation form droplet data}
+\subsubsection{Dynamic Method}
+\renewcommand{\arraystretch}{1.5} % Adjust row height (1.5x default height)
+\setlength{\tabcolsep}{2pt} % Adjust column spacing if needed
+\begin{table}[H]
+\centering
+\begin{tabular}{|m{1cm}|m{3cm}|m{3cm}|m{3cm}|m{2cm}|m{3cm}|}
+    \hline
+    Drop No. & $\xi (-Dv_f)$  & $r(=-\zeta+sqrt{\zeta^2+\zi})$ & $r^3$ & $T \left(   = 1+ \frac{t_f}{ t_r}    \right)$  &  $ne (=CTr^3/V)$ \\
+    \hline
+    1.&  &  &  &  &  \\
+    \hline
+2.&  &  &  &  &  \\
+    \hline
+3.&  &  &  &  &  \\
+    \hline
+4.&  &  &  &  &  \\
+    \hline
+5.&  &  &  &  &  \\
+    \hline
+\end{tabular}
+\end{table}
 
-\subsection{Systematic Errors and Precautions}  
-Potential systematic errors included spillage during transfers, residual material retention in containers, unintended material escape from the calorimeter, heat dissipation through radiation (according to Newton's law of cooling), assumptions of instrument calibration accuracy, post-experiment temperature inconsistencies in the calorimeter due to inadequate calibration, and uneven heating.  
+\subsubsection{Balancing Method}
+\begin{table}[H]
+\centering
+\begin{tabular}{|m{1cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+    \hline
+    Drop No. & $\xi (-Dv_f)$  & $r(=-\zeta+sqrt{\zeta^2+\zi})$ & $r^3$ &  $ne (=CTr^3/V)$ \\
+    \hline
+    1.&    &  &  &  \\
+    \hline
+2.  &  &  &  &  \\
+    \hline
+3.  &  &  &  &  \\
+    \hline
+4.  &  &  &  &  \\
+    \hline
+5.  &  &  &  &  \\
+    \hline
+\end{tabular}
+\end{table}
 
-Precautionary measures included preheating reused materials to eliminate residual moisture, repeating tests with procedural anomalies to replace outliers, and maintaining calorimeter thermal stability by refilling them with tap water after each run to standardize initial conditions.
 
 
-\section{Calculation and Error Analysis}
+\subsection{Analysis and Treatment}
+
+\begin{enumerate}
+  \item Identify the minimum value of charge $ne$ on droplets.
+  \item Divide the value of the charge $ne$ on all droplets by its minimum value.
+  \item The result will be numbers close to integers for all droplets.
+  \item Now extrapolate all these numbers. 
+  \item Divide the value of charge $ne$ on all droplets by the respective integers.
+  \item This gives the values on the charge of an electron by different droplets.
+\end{enumerate}
+\subsubsection{Dynamic Method}
+\begin{table}[H]
+\centering
+\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+    \hline
+    $ne$ & $ne$ divided by the lowest & Nearest integer $n_{eff}$ & $n_e/n_{eff}$ \\
+    \hline
+    1. &    &  &    \\
+    \hline
+2.  &  &  &    \\
+    \hline
+3.  &  &  &    \\
+    \hline
+4.  &  &  &    \\
+    \hline
+5.  &  &  &    \\
+    \hline
+\end{tabular}
+\end{table}
+\vspace{2cm}
 
 
+\subsubsection{Balancing Method}
 
-\subsection{Calculation}
-For non observed data potms we take sam einital temperatuer. disdcaard twwo non coper data points and take +- 3 grams of errpr of water equivalent for cimplicity. 
-
-\section{Result}
-\ref{github}
-
-The reference resistance was determined to be: $R_0 = 2.90 \pm 7.7\% $. (This error accounts for uncertainty in temperature measurements)\\
-
-The Stefan-Boltzmann fit for the tungsten filament showed:
-$$
-P = (4.00 \pm 0.066) \times 10^{-14}\ \mathrm{T^4}
-$$
-
-The log-log analysis revealed a power-law relationship:
-$$
-\log P = (3.98 \pm 0.06)\log T + (-30.71 \pm 0.48)
-$$
-
-\noindent\fbox{%
-    \parbox{\textwidth}{%
-       The measured slope of $m = 3.98 \pm 0.06$ agrees with Stefan's law prediction of $P \propto T^4$, as the theoretical value of 4 lies within the experimental uncertainty range.
-       }%
-}\\
-\\
+\begin{table}[H]
+\centering
+\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+    \hline
+    $ne$ & $ne$ divided by the lowest & Nearest integer $n_{eff}$ & $n_e/n_{eff}$ \\
+    \hline
+    1 &    &  &    \\
+    \hline
+2   &  &    &  \\
+    \hline
+3   &  &    &  \\
+    \hline
+4   &  &    &  \\
+    \hline
+5   &  &    &  \\
+    \hline
+\end{tabular}
+\end{table}
+\vspace{5cm}
 
 \noindent\rule{\linewidth}{0.4pt}
-\vspace{2cm}
-\appendix
-\section{water equivilane}\label{appendix:prevexp}
-ONly single measurement of wateer equivilant taken.
-\section{Ambient Temperature}
-No measure of ambient temperature is taken in the latter experiment, since it had no use in calculations other than the fact that it can be neglected. 
 
 
-https://en.wikipedia.org/wiki/Photoelectric_effect THE PHOTEVECTRIC current 0egarive makes no fucking sence
-refs: https://www.sesinstruments.in/planck-s-constant-experiment-pc-101-5141096.html
-http://www.hep.fsu.edu/~wahl/phy4822/expinfo/photel/SVSPhotel.pdf
 
-\bibliography{aipsamp}
+
+
+\newpage
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{erroranalysis}
+[1] Preston, Daryl W. and Dietz, Eric R., \emph{The Art of Experimental Physics}. Available at: \url{http://ilide.info-daryl-w-preston-eric-r-dietz-the-art-of-experimental-physics-wiley}
+
+\bibitem{wiki}
+[2] Wikipedia, \emph{Mi}, 2025. Available at: \url{en.wikipedia.org/wiki/Oil_drop_experiment}
+
+\bibitem{github_code}
+[3] LAUGHINGCATMEME, \emph{PH2233 - Code Repository}, 2025. Available at: \url{github.com/LAUGHINGCATMEME/PH2233}
+
+\bibitem{sesinstruments}
+[4] SES Instruments, \emph{Millikan Oil Drop Experiment, User Manual}. Available at: \url{sesinstruments.com/usersManual}
+
+\end{thebibliography}
+
 \end{document}
 
 
